@@ -1,0 +1,18 @@
+------------------------------------------------------------------------
+WaveMaster(Q-Vision)                          音源ﾎﾞｰﾄﾞ
+
+特徴  9P,Dｻﾌﾞﾒｽ(Joy)と50Pﾊｰﾌ端子(SCSI),ﾐﾆｼﾞｬｯｸ4個,4連Dip1つとM-ﾓｽ
+　　　(MidiMaster端子)がある。
+　　　電源投入時[CTRL]+[GRAPH]+[S]で割込/DMA設定ﾓｰﾄﾞ、SCSIのIDﾁｪｯｸ
+　　　中[CTRL]+[GRAPH]+[P]ではSCSIﾊﾟﾗﾒｰﾀｰ自動取得ﾓｰﾄﾞに立ち上がる。
+
+設定  SW1  1   FM音源        2   SCSI
+       ☆ ON   有効      ☆ ON   有効
+          OFF  無効         OFF　無効
+          
+           3   4    対応機種
+          OFF OFF   PC-98XA(ｻｳﾝﾄﾞ未対応)
+          OFF ON    8086/V30(ｻｳﾝﾄﾞ未対応)
+          ON  OFF   XL/XL2/RL
+       ☆ ON  ON    その他
+

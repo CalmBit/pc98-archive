@@ -1,0 +1,38 @@
+----------------------------------------------------------------------------
+EIF-98AWIII(ELECOM)                              SCSI-2,ﾊﾞｽﾏｽﾀ ﾎﾞｰﾄﾞ
+
+特徴  ｱﾝﾌｪﾉｰﾙ50Pﾊｰﾌ端子を持つSCSIﾎﾞｰﾄﾞ,ｼﾞｬﾝﾊﾟｰ1つのみ。
+
+設定  ｶﾅ及び,CAPSｷｰをOFFにし,ﾒﾓﾘｰﾁｪｯｸが始まったらSHIFTｷｰを押し
+　　　ROM内ﾌﾟﾛｸﾞﾗﾑを起動するか,MS-DOS上からｴﾚｺﾑｲﾝﾀｰﾌｪｰｽﾕｰﾃｨﾘﾃｨｰ
+　　　のAWSETを実行。
+
+   　 SCSI-ID　　　　　　(本体のID,ﾃﾞﾌｫﾙﾄ *7)
+　　　Interrupt level　　(割り込みﾚﾍﾞﾙ,ﾃﾞﾌｫﾙﾄ *INT0)
+　　　DMA Channel　　　　(DMAﾁｬﾝﾈﾙ,ﾃﾞﾌｫﾙﾄ　3)
+　　　Host type　　　　　(使用しているﾊﾟｿｺﾝのﾀｲﾌﾟ,ﾃﾞﾌｫﾙﾄ 286..486)
+　　　ROM address(N)　　 (ﾉｰﾏﾙﾓｰﾄﾞのROMｱﾄﾞﾚｽ,ﾃﾞﾌｫﾙﾄ DC000h-DCFFFh)
+　　　ROM address(H)   　(ﾊｲﾚｿﾞﾓｰﾄﾞのROMｱﾄﾞﾚｽ,ﾃﾞﾌｫﾙﾄ EC000h-ECFFFh)
+　　　BIOS access　　　　(ROMｱｸｾｽ,ﾃﾞﾌｫﾙﾄ ON)
+　　　I/O page address　 (I/Oｱﾄﾞﾚｽ,ﾃﾞﾌｫﾙﾄ CC0h,CC2h,CC4h)
+　　　Transfer mode　　　(転送方式,ﾃﾞﾌｫﾙﾄ BUS Master)
+　　　Terminator　　　　 (終端抵抗の有効/無効,ﾃﾞﾌｫﾙﾄ ON)
+　　　HRQ/HLA channel　　(ﾊﾞｽｱｰﾋﾞﾄﾚｰｼｮﾝﾁｬﾝﾈﾙ,ﾃﾞﾌｫﾙﾄ 2)
+　　　BUS master mode　　(外部ﾃﾞﾊﾞｲｽの指定,ﾃﾞﾌｫﾙﾄ External CPU)
+　　　MRC,MWC,pulse width(ﾘｰﾄﾞ/ﾗｲﾄ時のﾊﾟﾙｽ幅,ﾃﾞﾌｫﾙﾄ 300ns)
+　　　　　　　　　　　　　速くする程,不安定になります
+　　　Boot Scanning　　　(ﾁｪｯｸするID,ON...ﾁｪｯｸする/OFF...ﾁｪｯｸしない)
+　　　Format protect　　 (ﾌｫｰﾏｯﾄの禁止,ON...禁止する/OFF...禁止しない)
+　　　HDD format　　　　 (ﾌｫｰﾏｯﾄの種類,下記参照)
+　　　　　　　　ELECOM(ｾﾚｸﾀ方式)...EIF-98SW/DW/DWII/FBでﾌｫｰﾏｯﾄされたHDD
+　　　　　　　　BWﾓｰﾄﾞ(ﾄﾗｯｸ方式)...EIF-98BWでﾌｫｰﾏｯﾄされたHDD
+　　　　　　　　92.NEC標準ﾓｰﾄﾞ.....PC-9801-55x/92/100/F02/PC-9821A-E10/
+　　　　　　　　　　　　　　　　　 その他NEC-SCSIでﾌｫｰﾏｯﾄされたHDD
+　　　　　　　　92e.NEC拡張ﾓｰﾄﾞ....NEC標準ﾓｰﾄﾞで使用できない場合
+　　　　　　　　Forceﾓｰﾄﾞ..........上記全てで使用出来ない場合,ﾊﾟﾗﾒｰﾀｰの
+　　　　　　　　　　　　　　　　　 入力によりﾏﾆｭｱﾙ設定(下記参照)
+　　　Force HDD parameter(HDD formatでForceﾓｰﾄﾞに設定した場合のみ入力)
+　　　　　　　　ﾊﾟﾗﾒｰﾀｰを取得する方法はELECOMﾕｰｻﾞｰｻﾎﾟｰﾄまで 
+　　　　　　　　　　　　　　　　　　　　　　　　　　TEL 06-229-2956
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 2957
+　　　　　　　　　　　　　　　　　　　　　　　　  　FAX 06-229-1456

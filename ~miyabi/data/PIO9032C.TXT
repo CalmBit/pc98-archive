@@ -1,0 +1,30 @@
+----------------------------------------------------------------------------
+PIO-9032C(I/Oﾃﾞｰﾀｰ)                              RS232C第2.3.4.5回線ボード
+
+特徴  スロット部分にDサブ25Pin(メス)端子が2個,6連Dip4個,8連Dip1個。
+      向かって左がCH4.5,右がCH2.3(本体がCH1)
+      300bps～38400bpsまで対応,分岐232Cケーブルが2本付属
+
+設定  SW1  1    2     3     4     5     6     7     8   (I/O)
+       ☆ ON    ON    ON    ON    ON    ON    ON    ON   
+          A8=0  A9=0  A10=0 A11=0 A12=0 A13=0 A14=0 A15=0
+
+      SW.A/C  1   2   3  (CH2,4bps)   SW.A/C  4   5   6  (CH2,4INT)
+             OFF OFF OFF 38400               OFF OFF OFF 割り込み無し
+             ON  OFF OFF 300                 ON  OFF OFF INT6
+             OFF ON  OFF 600                 OFF ON  OFF INT5
+          ☆ ON  ON  OFF 1200                ON  ON  OFF INT4
+             OFF OFF ON  2400                OFF OFF ON  INT3
+             ON  OFF ON  4800                ON  OFF ON  INT2
+             OFF ON  ON  9600                OFF ON  ON  INT1
+             ON  ON  ON  19200            ☆ ON  ON  ON  INT0
+
+      SW.B/D  1   2   3  (CH2,4bps)   SW.B/D  4   5   6  (CH2,4INT)
+             OFF OFF OFF 38400               OFF OFF OFF 割り込み無し
+             ON  OFF OFF 300                 ON  OFF OFF INT3
+             OFF ON  OFF 600                 OFF ON  OFF INT2
+          ☆ ON  ON  OFF 1200                ON  ON  OFF INT1
+             OFF OFF ON  2400                OFF OFF ON  INT6
+             ON  OFF ON  4800             ☆ ON  OFF ON  INT5
+             OFF ON  ON  9600                OFF ON  ON  INT4
+             ON  ON  ON  19200               ON  ON  ON  INT0

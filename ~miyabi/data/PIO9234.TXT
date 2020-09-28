@@ -1,0 +1,15 @@
+----------------------------------------------------------------------------
+PIO-9234-1M/2M(I/Oﾃﾞｰﾀｰ)                       ﾊﾞﾝｸﾗﾑﾎﾞｰﾄﾞ
+
+特徴  2Mは6連Dip,1Mは8連Dipｽｲｯﾁが付いた２階建てﾊﾞﾝｸﾗﾑﾎﾞｰﾄﾞ,640KB登載機種
+      は本体Dip3-6をONにして512KBから増設,ﾒﾓﾘｰｽｲｯﾁで640KB指定して使用。
+
+設定                        1-1  1-2  1-3  1-4  1-5  1-6
+      PIO-9234-2M   128KB~  ON   ON   ON   ON   OFF  OFF
+                    384KB~  ON   ON   ON   ON   ON   OFF
+                    512KB~  ON   ON   ON   ON   OFF  ON
+
+                            1-1  1-2  1-3  1-4  1-5  1-6  1-7  1-8
+      PIO-9234-1M   128KB~  ON   ON   ON   ON   ON   OFF  OFF  OFF
+                    384KB~  ON   ON   ON   ON   ON   OFF  ON   OFF
+                    512KB~  ON   ON   ON   ON   ON   OFF  OFF  ON

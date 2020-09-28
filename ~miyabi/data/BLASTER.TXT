@@ -1,0 +1,32 @@
+----------------------------------------------------------------------------
+SOUND BLASTER16(98)(CREATIVE LABS)                          PCM音源ﾎﾞｰﾄﾞ
+
+特徴  15P.Dｻﾌﾞﾒｽ(JOY)と26Pｼｭﾘﾝｸ-ﾒｽ端子(CD-ROM)，ﾐﾆｼﾞｬｯｸ4個。
+      9連Dip1つｼﾞｬﾝﾊﾟｰ5か所､Cﾓｽ-ｿｹｯﾄ1つ(YM2203)とM-ﾓｽ(ｳｪｰﾌﾞｳﾞﾗｽﾀｰ)
+      ｿｹｯﾄがある。
+      
+
+設定  SW1   1   2   3   ROMｱﾄﾞﾚｽ   4   5  割り込みﾚﾍﾞﾙ   6   YM2203
+        ☆ ON  ON  ON   20D2      ON  ON  IRQ3          ON   有り
+           ON  ON  OFF  20D4      OFF ON  IRQ10      ☆ OFF  無し
+           ON  OFF ON   20D6      ON  OFF IRQ12
+           ON  OFF OFF  20D8   ☆ OFF OFF IRQ5
+           OFF ON  ON   20DA
+           OFF ON  OFF  20DC
+           OFF OFF ON   20DE
+
+            7  YM2203のI/Oｱﾄﾞﾚｽ    8   9   YM2203の割り込みﾚﾍﾞﾙ
+           ON   088Hex            ON  ON   IRQ3
+        ☆ OFF  188Hex            OFF ON   ORQ10
+                                  ON  OFF  IRQ5
+                               ☆ OFF OFF  IRQ12
+
+       JP1 全て開放
+
+       JP2   JP3  AcIvanced-Signal-Processor
+    ☆ 1-2   1-2  ｼｮｰﾄ   非搭載
+       2-3   2-3  ｼｮｰﾄ   搭載
+
+       JP4   JP5  YM2203
+    ☆ 1-2   1-2  ｼｮｰﾄ   非搭載
+       2-3   2-3  ｼｮｰﾄ   搭載

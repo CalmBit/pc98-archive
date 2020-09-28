@@ -1,0 +1,16 @@
+----------------------------------------------------------------------------
+PC-9801-27                                       SASIﾎﾞｰﾄﾞ(新)
+
+特徴  8連Dip2個の間に4連ｼﾞｬﾝﾊﾟｰ1個があるｱﾝﾌｪﾉｰﾙﾌﾙﾋﾟｯﾁ50PのI/F。
+
+設定  SW1  1   2   3   4   5  (1台目)   SW1  6   7   8  (2台目)
+          ON  ON  ON  ON  ON  5MB           OFF OFF OFF 無し
+          ON  ON  ON  ON  OFF 10MB          ON  ON  ON  5MB
+          ON  ON  OFF ON  ON  20MB          ON  ON  OFF 10MB
+          ON  ON  OFF OFF ON  40MB          OFF ON  ON  20MB
+                                            OFF OFF ON  40MB
+
+      SW2  1   2   3   4   5   6   7   8  (ROMｱﾄﾞﾚｽ固定)
+          OFF OFF OFF ON  OFF ON  OFF OFF &hD6000～D7FFF
+
+  　　SW3  1-8 3-6 98M2専用     2-7 4-5 初代98/98XA     1-8 4-5 その他

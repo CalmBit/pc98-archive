@@ -1,0 +1,27 @@
+----------------------------------------------------------------------------
+MDC-256(緑電子)                                  SASIﾎﾞｰﾄﾞ
+
+特徴  8連Dip2個と4連ｼﾞｬﾝﾊﾟｰ2個,3連ｼﾞｬﾝﾊﾟｰ1個があるｱﾝﾌｪﾉｰﾙ36P,
+      ﾌﾙﾋﾟｯﾁｺﾈｸﾀが2個あるI/F,向かって左側が1台目,右が増設用I/F。
+
+設定  SW1  1   2   3   4   5  (1台目)    SW1  6   7   8   (2台目)
+          ON  ON  OFF ON  ON  20MB           OFF OFF OFF  無し
+          ON  ON  OFF OFF ON  40MB           OFF ON  ON   20MB
+                                             OFF OFF ON   40MB
+
+      SW1  1   2   3   4   5   6   7   8 
+          ON  ON  ON  ON  OFF ON  ON  OFF (Little-B)20MBを10+10MBに分割
+          ON  ON  OFF ON  ON  OFF ON  ON  (Little-B4)40MBを20+20MBに分割
+
+      SW2  1   2   3   4   5   6   7   8     (ﾊﾞｲｵｽｱﾄﾞﾚｽ固定)
+          OFF OFF OFF ON  OFF ON  OFF OFF
+
+      JD1  CPUが98RA2の時, 4-3のみｼｮｰﾄ
+           HDDを分割する時,1-6のみｼｮｰﾄ
+           それ以外は全て解放
+
+      SP1  1-8 3-6 ｼｮｰﾄ 98M2専用
+           1-8 4-5 ｼｮｰﾄ 8086/V30/286/386CPU
+           2-7 4-5 ｼｮｰﾄ 初代98/98XA
+
+      SP2  1,2,3 ｼｮｰﾄ(固定)

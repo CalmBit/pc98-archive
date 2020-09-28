@@ -1,0 +1,16 @@
+----------------------------------------------------------------------------
+LAPC-N みゅーじ郎Jrﾎﾞｰﾄﾞ(Roland)               MIDIﾓｼﾞｭｰﾙﾎﾞｰﾄﾞ
+
+特徴  ｽﾛｯﾄ部に15PinDｻﾌﾞ(ﾒｽ)とｺﾝﾎﾟｼﾞｯﾄ端子2つ,ﾐﾆｼﾞｬｯｸが1つある2階建てのﾎﾞｰﾄﾞ
+      8連ｼﾞｬﾝﾊﾟｰが1個,ﾎﾞｰﾄﾞの間にある。
+
+設定  SW1  1   2   3   4   (I/Oｱﾄﾞﾚｽ)     5   6   7   8   (割り込みﾚﾍﾞﾙ)
+          OFF OFF OFF OFF  C0D0～C0D2    OFF OFF OFF ON   INT0
+          ON  OFF OFF OFF  C0D0～C0D2    OFF OFF ON  OFF  INT1
+          OFF ON  OFF OFF  C0D0～C0D2 ☆ OFF ON  OFF OFF  INT2
+          ON  ON  OFF OFF  C0D0～C0D2    ON  OFF OFF OFF  INT5
+          OFF OFF ON  OFF  C0D0～C0D2
+          ON  OFF ON  OFF  C0D0～C0D2
+          OFF ON  ON  OFF  C0D0～C0D2
+       ☆ ON  ON  ON  OFF  C0D0～C0D2
+

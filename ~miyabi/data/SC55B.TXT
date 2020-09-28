@@ -1,0 +1,41 @@
+----------------------------------------------------------------------------
+SC55B                                                     SCSIﾎﾞｰﾄﾞ
+
+特徴  ｱﾝﾌｪﾉｰﾙ50Pﾊｰﾌ端子を持つSCSIﾎﾞｰﾄﾞ,ｽﾛｯﾄ側に8連Dipが2つと2連Dip1つ
+　　　ｼﾞｬﾝﾊﾟｰ2個。
+
+設定  SW1  1   2   3  (ID) SW1  4   5   6   (割り込み) SW1  7   8   (DMA)
+          OFF ON  ON  6        OFF OFF OFF  INT 0          OFF OFF  #0
+          ON  OFF ON  5     　 ON  OFF OFF  INT 1          ON  OFF  設定禁止
+          OFF OFF ON  4     ☆ OFF ON  OFF  INT 2          OFF ON   #2
+          ON  ON  OFF 3        ON  ON  OFF  INT 3       ☆ ON  ON   #3    
+          OFF ON  OFF 2        OFF OFF ON   INT 5                         
+          ON  OFF OFF 1        ON  OFF ON   INT 6                          
+       ☆ OFF OFF OFF 0                                                   
+          ON  ON  ON  7                                                   
+
+      SW2  1   2   3  (ﾛｰｶﾙｱﾄﾞﾚｽ)    SW2  4   5  (ﾛｰｶﾙｱﾄﾞﾚｽ2)
+          ON  ON  ON   DE000~DEFFF       ON  ON  EE000~EEFFF
+       ☆ OFF ON  ON   DC000~DCFFF    ☆ OFF ON　EC000~ECFFF
+          ON  OFF ON   DA000~DAFFF       ON  OFF EA000~EAFFF
+          OFF OFF ON   D8000~D8FFF       OFF OFF E8000~E8FFF
+          ON  ON  OFF  D6000~D6FFF
+          OFF ON  OFF  D4000~D4FFF
+          ON  OFF OFF  D2000~D2FFF
+          OFF OFF OFF  D0000~D0FFF
+          
+      SW2  6   7   (使用機種)        SW2  8   (ROMｱｸｾｽ可)
+          OFF OFF   98XA専用          ☆ ON   可
+          ON  OFF   V30専用              OFF  不可
+          OFF ON    ﾊｲﾚｿﾞ/ﾉｰﾏﾙ両用
+       ☆ ON  ON    CPU 286,386,486
+
+      SW3  1   2    ｱﾄﾞｵﾝ機能
+          OFF ON    使用する
+          OFF OFF   使用しない
+          ON  ON    禁止
+          ON  OFF   禁止
+
+      JP1 ☆  1-2 3-4 ｼｮｰﾄ(固定)
+
+      JP2 ☆  3-6 4-5 ｼｮｰﾄ(固定)

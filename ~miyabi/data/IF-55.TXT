@@ -1,0 +1,40 @@
+----------------------------------------------------------------------------
+IF-55(CDS)                                       SCSI ﾎﾞｰﾄﾞ
+
+特徴  ｱﾝﾌｪﾉｰﾙ50Pﾌﾙﾌﾋﾟｯﾁ端子を持つSCSIﾎﾞｰﾄﾞ,8連Dipが2つと,内蔵用50Pinﾌﾗｯﾄ
+　　　ｹｰﾌﾞﾙ端子がある。
+
+設定  SW1 1 ☆ 常にON
+          2    ON   SASIﾊｰﾄﾞﾃﾞｨｽｸとSCSI機器混在
+            ☆ OFF  SASIﾊｰﾄﾞﾃﾞｨｽｸのみ
+
+           3   4   5   6   7   8
+       ☆ OFF OFF OFF OFF OFF OFF  SCSI機器のみ(4台迄)
+          OFF ON  ON  OFF OFF OFF  SCSI機器のみ(5台)
+          OFF ON  ON  OFF ON  ON   SCSI機器のみ(6台)
+          ON  ON  ON  OFF OFF OFF  SCSI機器のみ(SASI10MB 1台あり)
+          ON  ON  ON  ON  ON  ON   SCSI機器のみ(SASI10MB 2台あり)
+          ON  ON  OFF OFF OFF OFF  SCSI機器のみ(SASI20MB 1台あり)
+          ON  ON  OFF ON  ON  OFF  SCSI機器のみ(SASI20MB 2台あり
+          ON  OFF ON  OFF OFF OFF  SCSI機器のみ(SASI40MB 1台あり)
+          ON  OFF ON  ON  OFF ON   SCSI機器のみ(SASI40MB 2台あり)
+
+      SW2  1,2,3   (常にOFF) 
+
+           4   5   6                        7   8   (ROMｱﾄﾞﾚｽ) 
+       ☆ OFF OFF OFF   SCSIのみ使用       ON  OFF  D6000~D6FFF
+          OFF OFF ON    SASIと共存      ☆ OFF ON   D7000~D7FFF
+
+
+
+***************PC40-55(HDαmini)本体設定
+
+      SW3   1   2   3   ID           4  常にOFF      5   ﾊﾟﾘﾃｨｰﾁｪｯｸ
+           OFF OFF OFF  0                           ON   有り
+           OFF OFF ON   1                           OFF  無し
+           OFF ON  OFF  2
+           OFF ON  ON   3
+           ON  OFF OFF  4          SW1/SW2/SW3-6~8...全てON
+           ON  OFF ON   5
+           ON  ON  OFF  6
+           ON  ON  ON   7

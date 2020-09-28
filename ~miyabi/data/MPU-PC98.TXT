@@ -1,0 +1,17 @@
+----------------------------------------------------------------------------
+MPU-PC98,Ⅱ(Roland)                              MIDIﾎﾞｰﾄﾞ   
+
+特徴  5PinのDinｺﾈｸﾀｰが3つあり,MPU-PC98はｽｲｯﾁ類無し,
+      MPU-PC98IIは4連のDip1つと4連のｼﾞｬﾝﾊﾟｰ1つ。
+
+設定  SW1  割り込みﾚﾍﾞﾙ  ﾃﾞﾌｫﾙﾄ INT2
+
+      SW2  1   2    I/Oｱﾄﾞﾚｽ          3   4    I/Oｱﾄﾞﾚｽ
+          OFF OFF   CxD0～CxD2    ☆ OFF OFF   x0xx
+       ☆ ON  OFF   ExD0～ExD2       ON  OFF   x8xx
+          OFF ON    DxD0～DxD2       OFF ON    x4xx
+          ON  ON    FxD0～FxD2       ON  ON    xCxx
+
+      MPU-PC98...割り込み INT2       固定
+                 I/Oｱﾄﾞﾚｽ E0D0～E0D2 固定
+

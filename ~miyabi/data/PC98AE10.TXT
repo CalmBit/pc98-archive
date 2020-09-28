@@ -1,0 +1,27 @@
+----------------------------------------------------------------------------
+PC-9821A-E10(NEC)                                SCSIﾎﾞｰﾄﾞ
+
+特徴  ｱﾝﾌｪﾉｰﾙ50Pﾊｰﾌ端子を持つSCSIﾎﾞｰﾄﾞ,8連Dipが2つと2連ｼﾞｬﾝﾊﾟｰ3つ。
+      PC-9801FA/FS/FX.A-MATE SCSIｽﾛｯﾄ専用。
+
+設定  SW1  1   2   3  (ID) SW1  4   5   6  (割り込み) SW1  7   8  (DMA)
+          ON  OFF OFF 1        OFF OFF OFF INT 0       ☆ OFF OFF #0
+          OFF ON  OFF 2        ON  OFF OFF INT 1          ON  OFF 設定禁止
+          ON  ON  OFF 3        OFF ON  OFF INT 2          OFF ON  #2
+          OFF OFF ON  4     ☆ ON  ON  OFF INT 3          ON  ON  #3
+          ON  OFF ON  5        OFF OFF ON  INT 5
+          OFF ON  ON  6 
+       ☆ ON  ON  ON  7            
+
+      SW2  1   2   3   4   5   6   7                  ﾒﾓﾘｱﾄﾞﾚｽ
+       ☆ OFF ON  ON  OFF ON  ON  ON   ﾉｰﾏﾙﾓｰﾄﾞ     DC000-DDFFF
+          OFF ON  ON  OFF ON  OFF ON   ﾊｲﾚｿﾞﾎﾞｰﾄﾞ   EE000-EFFFF
+
+      SW2  8                       SW3   SW4    (I/Oﾍﾟｰｼﾞ ｱﾄﾞﾚｽ)
+       ☆ ON   ROMｱｸｾｽ可       ☆ 01-02 01-02   CCx(C8n,1C8m)
+          OFF  ROMｱｸｾｽ不可        02-03 01-02   CDx(D8n,1D8m)
+                                  01-02 02-03   CEx(E8n,1E8m)
+                                  02-03 02-03   CFx(F8n,1F8m)
+      
+      SW5 01-02ｼｮｰﾄ DMA転送ﾓｰﾄﾞ
+          02-03ｼｮｰﾄ CPU転送ﾓｰﾄﾞ

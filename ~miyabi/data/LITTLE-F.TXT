@@ -1,0 +1,16 @@
+----------------------------------------------------------------------------
+Little-F,F2(緑電子)                             外付けFDD
+
+設定  DS1(LFWのみ)     1   2   3   4    LFWの右側FDDの物理ﾄﾞﾗｲﾌﾞ№
+                   ☆ ON  OFF OFF OFF   
+                   
+      DS2              1   2   3   4    LFWの左側FDDの物理ﾄﾞﾗｲﾌﾞ№
+                   ☆ OFF ON  OFF OFF   
+                   
+      DS3              1   2   3   4    追加増設FDDの物理ﾄﾞﾗｲﾌﾞ№
+                   ☆ OFF OFF OFF OFF   増設しない
+                      OFF OFF ON  OFF   LFS+2ﾄﾞﾗｲﾌﾞ増設 OR LFW+1ﾄﾞﾗｲﾌﾞ
+                   
+      DS4              1   2   3   4    追加増設FDD,2台目の物理ﾄﾞﾗｲﾌﾞ№
+                   ☆ OFF OFF OFF OFF   増設しない
+                      OFF OFF OFF ON    LFW+2ﾄﾞﾗｲﾌﾞ増設 

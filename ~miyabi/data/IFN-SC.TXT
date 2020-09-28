@@ -1,0 +1,33 @@
+----------------------------------------------------------------------------
+IFN-SC.SCY(MELCO)                                SCSI-2ﾎﾞｰﾄﾞ
+
+特徴  ｱﾝﾌｪﾉｰﾙ50Pﾊｰﾌ端子を持つSCSIﾎﾞｰﾄﾞ,8連Dipが1つと4連ｼﾞｬﾝﾊﾟｰ1つ,
+      2連ｼﾞｬﾝﾊﾟｰ1つ
+      割り込み,DMAﾁｬﾝﾈﾙ,転送方式は立ち上げ時[CTRL]+[GRAPH]+[S]を
+      押してROM内ﾙｰﾁﾝで設定,HDDが認識しない場合は立ち上げ時,
+      [CTRL]+[GRAPH]+[P]を押して起動するとﾊﾟﾗﾒｰﾀｰ自動検出ﾓｰﾄﾞになる。
+
+設定  SW1  1  BIOSの有無    SW1  2   3   ﾎｽﾄﾀｲﾌﾟ
+       ☆ OFF 有効              OFF OFF  PC-98XA
+          ON　無効              ON  OFF  8086/V30機
+                                OFF ON   ﾊｲﾚｿﾞ/ﾉｰﾏﾙ兼用機
+                             ☆ ON  ON   286以降ﾉｰﾏﾙﾓｰﾄﾞのみ
+
+      SW1  4   5  ﾊｲﾚｿﾞROMｱﾄﾞﾚｽ   SW1  6   7   8  ﾉｰﾏﾙROMｱﾄﾞﾚｽ
+          OFF OFF E8000-E8FFF         OFF OFF OFF D0000-D0FFF
+          ON  OFF EA000-EAFFF         OFF OFF ON  D2000-D2FFF
+       ☆ OFF ON  EC000-ECFFF         OFF ON  OFF D4000-D4FFF
+          ON  ON  EE000-EEFFF         OFF ON  ON  D6000-D6FFF
+                                      ON  OFF OFF D8000-D8FFF
+                                      ON  OFF ON  DA000-DAFFF
+                                   ☆ ON  ON  OFF DC000-DCFFF
+                                      ON  ON  ON  DE000-DEFFF
+
+     JP1  1-8  2-7  ｼｮｰﾄ ﾎﾞｰﾄﾞﾘｸｴｽﾄCH1
+       ☆ 3-6  4-5  ｼｮｰﾄ ﾎﾞｰﾄﾞﾘｸｴｽﾄCH2
+     
+     JP2  1-4  2-3  I/Oｱﾄﾞﾚｽ
+       ☆ ｼｮｰﾄ ｼｮｰﾄ CC0.CC2.CC4.CC6
+          解放 ｼｮｰﾄ CD0.CD2.CD4.CD6
+          ｼｮｰﾄ 解放 CE0.CE2.CE4.CE6
+          解放 解放 CF0.CF2.CF4.CF6

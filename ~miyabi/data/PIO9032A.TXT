@@ -1,0 +1,29 @@
+----------------------------------------------------------------------------
+PIO-9032A(I/Oﾃﾞｰﾀｰ)                              RS232C第2.3回線ﾎﾞｰﾄﾞ
+
+特徴  ｽﾛｯﾄ部分にDｻﾌﾞ25Pin(ﾒｽ)端子が2個,8連Dip2個,6連Dip1個,6連ｼﾞｬﾝﾊﾟｰ
+      が2つ(全てｼｮｰﾄ),向かって左がCH2,右がCH3,75bps～9600bpsまで対応。
+
+設定  SW3  1   2  (CH2割り込み)  3   4  (CH3割り込み)  SW3  5   6  (ｸﾛｯｸ)
+       ☆ OFF OFF INT0          OFF OFF INT0               ON  OFF 5MHz
+          OFF ON  INT1          OFF ON  INT4            ☆ OFF ON  8MHz以上
+          ON  OFF INT2       ☆ ON  OFF INT5
+          ON  ON  INT3          ON  ON  INT6
+
+      SW4   1   2   3   4   5   6   7   8   (CH2ﾎﾞｰﾚｰﾄ)
+           OFF OFF OFF OFF OFF OFF ON  OFF  150bps
+           OFF OFF OFF OFF OFF ON  OFF OFF  300bps
+           OFF OFF OFF OFF ON  OFF OFF OFF  600bps
+           OFF OFF OFF ON  OFF OFF OFF OFF  1200bps
+           OFF OFF ON  OFF OFF OFF OFF OFF  2400bps
+           OFF ON  OFF OFF OFF OFF OFF OFF  4800bps
+        ☆ ON  OFF OFF OFF OFF OFF OFF OFF  9600bps
+
+      SW5   1   2   3   4   5   6   7   8   (CH3ﾎﾞｰﾚｰﾄ)
+           OFF OFF OFF OFF OFF OFF ON  OFF  150bps
+           OFF OFF OFF OFF OFF ON  OFF OFF  300bps
+           OFF OFF OFF OFF ON  OFF OFF OFF  600bps
+           OFF OFF OFF ON  OFF OFF OFF OFF  1200bps
+           OFF OFF ON  OFF OFF OFF OFF OFF  2400bps
+           OFF ON  OFF OFF OFF OFF OFF OFF  4800bps
+        ☆ ON  OFF OFF OFF OFF OFF OFF OFF  9600bps

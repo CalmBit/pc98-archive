@@ -1,0 +1,14 @@
+----------------------------------------------------------------------------
+LFA-14(Logitec)                                  2HD I/Fﾎﾞｰﾄﾞ
+
+特徴   ｵｼﾚｰﾀｰが乗っている50PinｱﾝﾌｪﾉｰﾙﾌﾙﾋﾟｯﾁのI/F,8連Dipが1つとｼﾞｬﾝﾊﾟｰが1つ。
+
+設定  SW1  1   2   3   4   5  (固定)       SW1  6   7   8   (ﾒﾓﾘｰｱﾄﾞﾚｽ) 
+       ☆ ON  OFF ON  OFF ON                   ON  ON  ON   \D0000～D0FFF
+                                               ON  ON  OFF  \D1000～D1FFF
+                                   　　　　    ON  OFF ON   \D2000～D2FFF
+      SW2   ☆ A-B (ｼｮｰﾄ)...ROM ON             ON  OFF OFF  \D3000～D3FFF
+      　　　   B-C (ｼｮｰﾄ)...ROM OFF            OFF ON  ON   \D4000～D4FFF
+                                               OFF ON  OFF  \D5000～D5FFF
+                                               OFF OFF ON   \D6000～D6FFF
+                                            ☆ OFF OFF OFF  \D7000～D7FFF

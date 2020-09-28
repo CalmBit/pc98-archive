@@ -1,0 +1,18 @@
+----------------------------------------------------------------------------
+B98-01(AIWA)                                     RS232C第2.3回線ﾎﾞｰﾄﾞ
+
+特徴  ｽﾛｯﾄ部分にDｻﾌﾞ25Pin(ﾒｽ)端子が2個,8連Dip1個,4連Dip2個,
+      向かって左がCH2,右がCH3,75bps～153600bpsまで対応。
+
+設定  S1  1   2   3   4   5   6   7   8   (ﾌｧﾝｸｼｮﾝﾚｼﾞｽﾀｰ,ﾎﾞｰﾚｰﾄﾚｼﾞｽﾀｰ)
+      ☆ OFF OFF OFF OFF OFF OFF OFF OFF  CH2=00D3,00D1 CH3=00D7,00D5
+
+      S2  1   2   3   4    (CH2割り込み) S3   1   2   3   4    (CH3割り込み)
+      ☆ ON  ON  ON  ---   INT0              ON  ON  ON  ---   INT0
+         ON  ON  OFF ---   INT1              ON  ON  OFF ---   INT4
+         ON  OFF ON  ---   INT2           ☆ ON  OFF ON  ---   INT5
+         ON  OFF OFF ---   INT3              ON  OFF OFF ---   INT6
+         OFF ON  ON  ---   INT4              OFF ON  ON  ---   INT1
+         OFF ON  OFF ---   INT5              OFF ON  OFF ---   INT2
+         OFF OFF ON  ---   INT6              OFF OFF ON  ---   INT3
+         OFF OFF OFF ---   不可              OFF OFF OFF ---   不可

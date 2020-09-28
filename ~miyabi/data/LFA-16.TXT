@@ -1,0 +1,17 @@
+----------------------------------------------------------------------------
+LFA-16(Logitec)                                   2ED I/Fﾎﾞｰﾄﾞ
+
+特徴   32MHzのｵｼﾚｰﾀｰがのっている36PinｱﾝﾌｪﾉｰﾙﾌﾙﾋﾟｯﾁのI/F,8連Dipが1つ。
+　　　 LFD-302Rという3.5インチドライブを接続する。2EDはフロッピー一枚あたり
+　　　 およそ2950KBの容量を持つ。2HD、2DDの読み書きも可。システム起動不可。
+
+設定  SW1  1   2   3   4  (割り込み)  SW1  6   7   8    (I/Oｱﾄﾞﾚｽ)
+          ON  OFF OFF OFF  INT 5          OFF OFF OFF   0CDEH,0DDEH,0EDEH,0FDEH
+          OFF ON  OFF OFF  INT 2          ON  OFF OFF   0CDCH,0DDCH,0EDCH,0FDCH
+       ☆ OFF OFF ON  OFF  INT 1          OFF ON  OFF   0CDAH,0DDAH,0EDAH,0FDAH
+          OFF OFF OFF ON   INT 0          ON  ON  OFF   0CD8H,0DD8H,0ED8H,0FD8H
+                                          OFF OFF ON    0CD6H,0DD6H,0ED6H,0FD6H
+      SW1  5              (DMAﾁｬﾈﾙ)       ON  OFF ON    0CD4H,0DD4H,0ED4H,0FD4H
+      　　OFF 　           DMA 0          OFF ON  ON    0CD2H,0DD2H,0ED2H,0FD2H
+       ☆ ON               DMA 3       ☆ ON  ON  ON    0CD0H,0DD0H,0ED0H,0FD0H
+

@@ -1,0 +1,19 @@
+----------------------------------------------------------------------------
+D5111 HDC                                        SASIﾎﾞｰﾄﾞ
+
+特徴  8連Dip2個と4連Dip1個のｱﾝﾌｪﾉｰﾙﾌﾙﾋﾟｯﾁ50PのI/F。
+
+設定  DS1  1   2   3   4   5  (1台目)   SW1  6   7   8  (2台目)
+          ON  ON  ON  ON  ON  5MB           OFF OFF OFF 無し
+          ON  ON  ON  ON  OFF 10MB          ON  ON  ON  5MB
+          ON  ON  OFF ON  ON  20MB          ON  ON  OFF 10MB
+          ON  ON  OFF OFF ON  40MB          OFF ON  ON  20MB
+                                            OFF OFF ON  40MB
+
+      DS3  1   2   3   4   5   6   7   8  (ROMｱﾄﾞﾚｽ固定)
+          OFF OFF OFF ON  OFF ON  OFF OFF &hD6000～D7FFF
+
+  　　DS1  1   2   3   4   機種設定
+          ON  OFF ON  OFF  98M2
+          OFF ON  OFF ON   初代98,98XA
+          ON  OFF OFF ON   その他

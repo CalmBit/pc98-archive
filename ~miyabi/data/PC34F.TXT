@@ -1,0 +1,36 @@
+----------------------------------------------------------------------------
+PIO-PC34F,FX-1～16M(I/Oﾃﾞｰﾀｰ)                    EMS,ﾌﾟﾛﾃｸﾄ,ﾊﾞﾝｸRAM
+
+特徴  16CHﾛｰﾀﾘｰｽｲｯﾁ2つ,8連6連Dip1つずつ,増設用端子1組がある(34FXのみ)。
+
+設定  SW1-1     ON..286以上時  OFF..V30,8086時
+        1-2,3   ON,ON..ﾌｧｰｽﾄﾍﾟｰｼﾞｱｸｾｽ  ON,OFF..ﾍﾟｰｼﾞﾓｰﾄﾞｱｸｾｽ
+                OFF,ON..倍速ｱｸｾｽ  OFF,OFF..通常ｱｸｾｽ
+        1-4     ON..286以上時  OFF..V30,8086時
+        1-5～8  OFF,OFF,OFF,OFF...640KB以上からの増設
+                OFF,OFF,OFF,ON ...512KB以上からの増設
+                OFF,OFF,ON ,ON ...384KB以上からの増設
+                OFF,ON ,ON ,ON ...256KB以上からの増設
+                ON ,ON ,ON ,ON ...128KB以上からの増設
+
+      SW2    1   2   3   4   5   6                  
+            OFF OFF OFF OFF ON  OFF  (640KB～)       
+            OFF OFF OFF OFF ON  ON   (640KB+512KB～) 
+            OFF OFF OFF ON  OFF OFF  (640KB+1024KB～)
+            OFF OFF OFF ON  OFF ON   (640KB+1536KB～)
+            OFF OFF OFF ON  ON  OFF  (640KB+2048KB～)
+            OFF OFF OFF ON  ON  ON   (640KB+2560KB～)
+            OFF OFF ON  OFF OFF OFF  (640KB+3072KB～)
+                              |                     
+
+      SW3  0  ﾌﾟﾛﾃｸﾄﾒﾓﾘｰ
+           1  ﾌﾟﾛﾃｸﾄﾒﾓﾘｰ+I/Oﾊﾞﾝｸ
+           2  ﾌﾟﾛﾃｸﾄﾒﾓﾘｰ+EMS    
+           3       同上              3-0～3...ﾏﾙﾁﾓｰﾄﾞ
+           4  ﾌﾟﾛﾃｸﾄﾒﾓﾘｰ
+           5  ﾌﾟﾛﾃｸﾄﾒﾓﾘｰ+I/Oﾊﾞﾝｸ
+           6  ﾌﾟﾛﾃｸﾄﾒﾓﾘｰ+EMS    
+           7  I/Oﾊﾞﾝｸ+EMS             3-4～7...ｾﾊﾟﾚｰﾄﾓｰﾄﾞ
+
+      SW4 指定ﾌﾟﾛﾃｸﾄﾒﾓﾘｰ（又はﾊﾞﾝｸﾒﾓﾘｰ）容量        0～F....0MB～15MB
+          

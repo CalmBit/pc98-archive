@@ -1,0 +1,26 @@
+----------------------------------------------------------------------------
+PIO-9X34P-2,4,8M(I/Oﾃﾞｰﾀｰ)                       ﾌﾟﾛﾃｸﾄ,ﾊﾞﾝｸﾗﾑﾎﾞｰﾄﾞ
+
+特徴  6連Dip2つ(8Mのみ6連1つと3連1つ)とｶｰﾄﾞﾌﾟﾗのところに2連Dip1つ
+      2M,4Mは増設用ｿｹｯﾄあり,ﾊﾞﾝｸﾓｰﾄﾞは512KBからでしか増設はできない。
+
+設定
+ﾌﾟﾛﾃｸﾄﾒﾓﾘｰ　　SW1-1,2           ON
+              SW3               全てOFF
+              SW2-1  2-2  2-3  2-4  2-5  2-6
+ 640KB～        OFF  ON   OFF  OFF  OFF  OFF
+ 640KB+512KB～  ON   ON   OFF  OFF  OFF  OFF
+ 640KB+1024KB～ OFF  OFF  ON   OFF  OFF  OFF
+ 640KB+1536KB～ ON   OFF  ON   OFF  OFF  OFF
+                      |
+
+ﾊﾞﾝｸﾒﾓﾘｰ　  　SW1-1             OFF
+                1-2             ON...ﾊﾟﾘﾃｨｰﾁｪｯｸ有効
+                                OFF..ﾊﾟﾘﾃｨｰﾁｪｯｸ無効
+              SW3-1,6           OFF
+              SW2-1  2-2  2-3  2-4  2-5  2-6  3-2  3-3  3-4  3-5
+ 512KB～        OFF  ON   OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF
+ 640KB+512KB～  ON   ON   OFF  OFF  OFF  OFF  ON   OFF  OFF  OFF
+ 640KB+1024KB～ OFF  OFF  ON   OFF  OFF  OFF  OFF  ON   OFF  OFF
+ 640KB+1536KB～ ON   OFF  ON   OFF  OFF  OFF  ON   ON   OFF  OFF
+                                 |

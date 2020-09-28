@@ -1,0 +1,16 @@
+----------------------------------------------------------------------------
+PC-9801-100(NEC)                                 SCSI2ﾎﾞｰﾄﾞ
+
+特徴  ｱﾝﾌｪﾉｰﾙ50Pﾊｰﾌ端子を持つSCSIﾎﾞｰﾄﾞ,5連Dipが1つ,割り込み等は
+　　　付属のSCSI2ﾄﾞﾗｲﾊﾞｰｾｯﾄFDにて行う。
+
+設定  SW1  1   2   3   4  ﾒﾓﾘｱﾄﾞﾚｽ
+       ☆ OFF OFF OFF OFF DC000h-DFFFFh
+          ON  OFF OFF OFF D8000h-D8FFFh
+          OFF ON  OFF OFF D4000h-D7FFFh
+          ON  ON  OFF OFF D0000h-D3FFFh
+          ON  ON  ON  OFF BIOS無効
+
+      SW1  5   I/Oﾎﾟｰﾄｱﾄﾞﾚｽ
+       ☆ OFF  1840h-187Eh.186Dh(偶数)
+          ON   3840h-387Eh.386Dh(偶数)

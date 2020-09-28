@@ -1,0 +1,99 @@
+----------------------------------------------------------------------------
+PC-9801-101(NEC)                                  RS232Cﾎﾞｰﾄﾞ
+
+
+特徴  Dｻﾌﾞ25Pを2つ持ったI/F,8連Dipが4つと6連ｼﾞｬﾝﾊﾟｰ2つ,1連ｼﾞｬﾝﾊﾟｰ1つ
+      及びﾓｰﾄﾞ切り替えｽｲｯﾁ1つ。
+
+設定  SW1  ﾓｰﾄﾞ切り替え
+           PC-9861K互換ﾓｰﾄﾞ....PnP未対応機種
+        ☆ PnP.................PnP対応機種
+
+      SW2-1 互換ﾓｰﾄﾞでの割り込みﾓｰﾄﾞの指定.通常OFF
+            使用するｿﾌﾄｳｪｱが許可している場合のみON(共有割り込みﾓｰﾄﾞ)
+
+      SW2-2 互換ﾓｰﾄﾞでのﾒﾓﾘｽｲｯﾁの有無の設定.通常OFF
+            使用するｿﾌﾄｳｪｱが許可している場合のみON(SW4.5の設定は無効)
+
+      SW2  3   4   5   6  I/Oｱﾄﾞﾚｽ(0nBxh)  SW2  7   8  未使用
+       ☆ OFF OFF OFF OFF nの値 0            ☆ OFF OFF
+          OFF OFF OFF ON  nの値 1
+          OFF OFF ON  OFF nの値 2          SW3  1   2  CH2割り込みﾚﾍﾞﾙ
+          OFF OFF ON  ON  nの値 3           ☆ OFF OFF INT0
+          OFF ON  OFF OFF nの値 4              OFF ON  INT1
+          OFF ON  OFF ON  nの値 5              ON  OFF INT2
+          OFF ON  ON  OFF nの値 6              ON  ON  INT3
+          OFF ON  ON  ON  nの値 7
+          ON  OFF OFF OFF nの値 8          SW3  3   4  CH3割り込みﾚﾍﾞﾙ
+          ON  OFF OFF ON  nの値 9              OFF OFF INT0
+          ON  OFF ON  OFF nの値 A              OFF ON  INT4
+          ON  OFF ON  ON  nの値 B           ☆ ON  OFF INT5
+          ON  ON  OFF OFF nの値 C              ON  ON  INT6
+          ON  ON  OFF ON  nの値 D
+          ON  ON  ON  OFF nの値 E
+          ON  ON  ON  ON  nの値 F
+
+      SW3  1   2   3   4   共有割り込みﾚﾍﾞﾙ(SW2-1 ON時のみ)
+           -  OFF OFF OFF  INT0
+           -  OFF OFF ON   INT1
+           -  OFF ON  OFF  INT2
+           -  OFF ON  ON   INT3
+           -  ON  OFF OFF  INT4
+           -  ON  OFF ON   INT5
+           -  ON  ON  OFF  INT6
+
+      SW3  5   6   7   8   ROMｱﾄﾞﾚｽ
+          OFF OFF OFF OFF  C0000h-C3FFFh
+          OFF OFF OFF ON   C4000h-C7FFFh
+          OFF OFF ON  OFF  C8000h-CBFFFh
+          OFF OFF ON  ON   CC000h-CFFFFh
+       ☆ OFF ON  OFF OFF  D0000h-D3FFFh
+          OFF ON  OFF ON   D4000h-D7FFFh
+          OFF ON  ON  OFF  D8000h-DBFFFh
+          OFF ON  ON  ON   DC000h-DFFFFh
+          ON  OFF OFF OFF  ROMｱｸｾｽ不可
+
+      SW4...CH2の設定  SW5...CH3の設定
+
+      SW4/5  1   2   通信ﾓｰﾄﾞ
+         ☆ ON  ON   調歩同期(非同期) PC-9801-101内のｸﾛｯｸを基準
+            ON  OFF  同期(ST2)        外部ｸﾛｯｸにより動作
+            OFF ON   刻時同期         外部RD入力ﾃﾞｰﾀに同期
+            OFF OFF  同期(ST1)        PC-9801-101内のｸﾛｯｸを使用
+
+      SW4/5  3   4   5   6  7    調歩同期(非同期)/刻時同期の通信速度
+            OFF OFF ON  ON  ON   75bps
+            ON  ON  OFF ON  ON   150bps
+            OFF ON  OFF ON  ON   300bps
+            ON  OFF OFF ON  ON   600bps
+            OFF OFF OFF ON  ON   1200bps
+            ON  ON  ON  OFF ON   2400bps
+            OFF ON  ON  OFF ON   4800bps
+         ☆ ON  OFF ON  OFF ON   9600bps
+            ON  ON  OFF OFF ON   19200bps(調歩同期のみ)
+
+      SW4/5  3   4   5   6  7    同期(ST1.ST2)の通信速度
+            ON  ON  ON  ON  ON   150bps
+            OFF ON  ON  ON  ON   300bps
+            ON  OFF ON  ON  ON   600bps
+            OFF OFF ON  ON  ON   1200bps
+            ON  ON  OFF ON  ON   2400bps
+            OFF ON  OFF ON  ON   4800bps
+            ON  OFF OFF ON  ON   9600bps
+
+      J1   互換ﾓｰﾄﾞ時のI/Oｱﾄﾞﾚｽ･ﾃﾞｺｰﾄﾞ
+        ☆ ｼｮｰﾄ   16bitﾃﾞｺｰﾄﾞ
+           解放   8bitﾃﾞｺｰﾄﾞ
+
+      J2/J4   PD71051に供給するｸﾛｯｸｿｰｽを切り替えるｼﾞｬﾝﾊﾟ.J2/J4ともに
+              ﾃﾞﾌｫﾙﾄはｼｮｰﾄ
+
+      J3/J5   I/Fのﾋﾟﾝ割り当ての変更J3/J5ともにﾃﾞﾌｫﾙﾄは全てｼｮｰﾄ
+
+              ﾊｰﾈｽ側   J3/J5   ｽﾛｯﾄ側
+               TXD   -   1   -  TXD
+               RTS   -   2   -  RTS
+               DTR   -   3   -  DTR
+               RXD   -   4   -  RXD
+               CTS   -   5   -  CTS
+               DSR   -   6   -  DSR

@@ -1,0 +1,31 @@
+----------------------------------------------------------------------------
+BM-1000,1500,2000(MELCO)                         ﾊﾞﾝｸRAM
+
+特徴  8連Dip1つのﾊﾞﾝｸﾒﾓﾘｰ,640KB登載機種では本体Dip3-1をONにして512KB設定
+　　　にし,ﾒﾓﾘｰｽｲｯﾁで640KBに設定して使用,旧ﾀｲﾌﾟに6連Dipﾀｲﾌﾟ有り
+
+設定                  Dip        1-6  1-7  1-8      1-1~4 全てON
+       �  ｽﾀｰﾄｱﾄﾞﾚｽ 128KB～     OFF  OFF  OFF
+    640KB  ｽﾀｰﾄｱﾄﾞﾚｽ 256KB～     ON   OFF  OFF
+      未満 ｽﾀｰﾄｱﾄﾞﾚｽ 384KB～     OFF  ON   OFF
+       �  ｽﾀｰﾄｱﾄﾞﾚｽ 512KB～     OFF  OFF  ON 
+           ｽﾀｰﾄｱﾄﾞﾚｽ 640KB~      ON   ON   OFF
+
+BM-1000,2000          Dip        1-1  1-2  1-3  1-4  1-5  1-6～8
+           実装ﾒﾓﾘ640KB+896KB～  OFF  ON   ON   ON   ON   OFF
+           実装ﾒﾓﾘ640KB+1920KB～ ON   OFF  ON   ON   ON   OFF
+           実装ﾒﾓﾘ640KB+2944KB～ OFF  OFF  ON   ON   ON   OFF
+           実装ﾒﾓﾘ640KB+3968KB～ ON   ON   OFF  ON   ON   OFF
+                                 |
+
+BM-1500               Dip        1-1  1-2  1-3  1-4  1-5  1-6～8
+           実装ﾒﾓﾘ640KB+1920KB～ ON   OFF  ON   ON   ON   OFF
+           実装ﾒﾓﾘ640KB+3968KB～ ON   ON   OFF  ON   ON   OFF
+           実装ﾒﾓﾘ640KB+6016KB～ ON   OFF  OFF  ON   ON   OFF
+           実装ﾒﾓﾘ640KB+8064KB～ ON   ON   ON   OFF  ON   OFF
+                                 |
+
+           6連Dip                1-4  1-5  1-6      1-1~3 全てON
+           ｽﾀｰﾄｱﾄﾞﾚｽ 128KB～     ON   OFF  OFF
+           ｽﾀｰﾄｱﾄﾞﾚｽ 384KB～     ON   ON   OFF
+           ｽﾀｰﾄｱﾄﾞﾚｽ 512KB～     ON   OFF  ON 

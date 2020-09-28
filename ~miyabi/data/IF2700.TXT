@@ -1,0 +1,19 @@
+----------------------------------------------------------------------------
+IF-2700,10,11,20,25(ICM)                         SASIﾎﾞｰﾄﾞ
+
+特徴  8連Dip2個の間に4連ｼﾞｬﾝﾊﾟｰ1個があるDｻﾌﾞ37PのI/F,TEACからもこの
+　　　OEM(?)が50Pinｱﾝﾌｪﾉｰﾙﾌﾙﾋﾟｯﾁで存在する。
+
+設定  SW1  1   2   3   4   5 (1台目)    SW1  6   7   8  (2台目)
+          ON  ON  OFF ON  ON 20MB        ☆ OFF OFF OFF 無し
+       ☆ ON  ON  OFF OFF ON 40MB           OFF ON  ON  20MB
+          ON  ON  ON  ON  ON 80MB           OFF OFF ON  40MB
+                                            ON  ON  ON  80MB
+
+      SW2  1   2   3   4   5   6   7   8
+       ☆ ON  OFF OFF ON  OFF ON  OFF OFF   FIFO転送ﾓｰﾄﾞ
+          OFF OFF OFF ON  OFF ON  OFF OFF   DMA転送ﾓｰﾄﾞ(98E,F,M)
+
+      SW3  1-8 3-6     98M2専用
+           1-8 4-5     8086/V30/286/386CPU
+           2-7 4-5     初代98/98XA

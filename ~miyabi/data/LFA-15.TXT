@@ -1,0 +1,16 @@
+----------------------------------------------------------------------------
+LFA-15(Logitec)                                   2DD I/Fﾎﾞｰﾄﾞ
+
+特徴   ｵｼﾚｰﾀｰが乗っている36PinｱﾝﾌｪﾉｰﾙﾌﾙﾋﾟｯﾁのI/F,8連Dipが1つとｼﾞｬﾝﾊﾟｰが1つ。
+
+設定  SW1  1   2        (割り込み)    SW1  3,4,5  全てOFF (固定)
+          ON  ON        INT 3
+       ☆ ON  OFF       INT 4         SW1  6   7   8    (ROMｱﾄﾞﾚｽ)
+          OFF ON        INT 5             ON  ON  ON    \D0000～D0FFF
+          OFF OFF       INT 6             ON  ON  OFF   \D1000～D1FFF
+                                          ON  OFF ON    \D2000～D2FFF
+                                          ON  OFF OFF   \D3000～D3FFF
+      SW2 (固定)                          OFF ON  ON    \D4000～D4FFF
+                                          OFF ON  OFF   \D5000～D5FFF
+                                       ☆ OFF OFF ON    \D6000～D6FFF
+                                          OFF OFF OFF   \D7000～D7FFF

@@ -1,0 +1,54 @@
+----------------------------------------------------------------------------
+HA-55GT(TEXA)                                   SCSI ﾎﾞｰﾄﾞ
+
+特徴  ｱﾝﾌｪﾉｰﾙ50Pﾊｰﾌﾋﾟｯﾁ端子を持つSCSIﾎﾞｰﾄﾞ,8連Dipが2つと5連Dip1つ,
+　　　ｼﾞｬﾝﾊﾟｰ3つあるI/F。
+
+設定  SW1  1   2   3   割り込み        4   5   DMAﾁｬﾝﾈﾙ
+          OFF OFF OFF  INT0           OFF OFF  0
+       ☆ ON  OFF OFF  INT1           ON  OFF  禁止
+          OFF ON  OFF  INT2           OFF ON   2
+          ON  ON  OFF  INT3        ☆ ON  ON   3
+          OFF OFF ON   INT5
+          ON  OFF ON   INT6
+
+      SW2  1   2   3  (ROM ｱﾄﾞﾚｽ)    SW2  4   5  (RON ｱﾄﾞﾚｽ ﾊｲﾚｿﾞ機)
+          OFF OFF OFF  D0000～D0FFF      OFF OFF  E8000～E8FFF
+          ON  OFF OFF  D2000～D2FFF      ON  OFF  EA000～EAFFF
+          OFF ON  OFF  D4000～D4FFF   ☆ OFF ON   EC000～ECFFF
+          ON  ON  OFF  D6000～D6FFF      ON  ON   EE000～EEFFF
+          OFF OFF ON   D8000～D8FFF     
+          ON  OFF ON   DA000～DAFFF     
+       ☆ OFF ON  ON   DC000～DCFFF     
+          ON  ON  ON   DE000～DEFFF     
+
+      SW2  6   7   (使用機種)             SW2  8   (ROMｱｸｾｽ可)
+          OFF OFF   98XA専用               ☆ ON   可
+          ON  OFF   V30専用                   OFF  切り離し
+          OFF ON    98XL,XL^2,RL専用
+       ☆ ON  ON    CPU 286,386,486
+
+      SW3 SW4  I/Oﾎﾟｰﾄ
+   ☆ OFF OFF　0CC0,0CC2,0CC4
+      ON  OFF　0CD0,0CD2,0CD4
+      OFF ON 　0CE0,0CE2,0CE4
+      ON  ON 　0CF0,0CF2,0CF4
+ 
+      SW5  1   未使用　      2   3   4   ﾗｽﾀｰ3の動作ｲﾒｰｼﾞ
+       ☆ OFF  固定      ☆ OFF OFF OFF  TEXAｵﾘｼﾞﾅﾙ,光磁気(LU-3)
+                            OFF ON  OFF  PC-OD301互換ﾓｰﾄﾞ
+                            OFF OFF ON   ﾊｰﾄﾞﾃﾞｨｽｸ互換ﾓｰﾄﾞ(ﾗｰｼﾞﾊﾟｰﾃｰｼｮﾝ)
+                            ON  OFF ON   ﾊｰﾄﾞﾃﾞｨｽｸ互換ﾓｰﾄﾞ(ｽﾓｰﾙﾊﾟｰﾃｰｼｮﾝ)
+
+           5   転送ﾓｰﾄﾞ          6   7   8   IDﾅﾝﾊﾞｰ
+          OFF  DMA転送          OFF OFF OFF  0
+       ☆ ON   自動切り替え     ON  OFF OFF  1
+                                OFF ON  OFF  2
+                                ON  ON  OFF  3
+                                OFF OFF ON   4
+                                ON  OFF ON   5
+                                OFF ON  ON   6
+                                ON  ON  ON   7
+
+      JP1   ON固定
+

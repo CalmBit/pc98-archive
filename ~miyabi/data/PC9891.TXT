@@ -1,0 +1,26 @@
+----------------------------------------------------------------------------
+PC-9801-91(NEC)                           ﾌﾙｶﾗｰｳｨﾝﾄﾞｳｱｸｾﾗﾚｰﾀｰﾎﾞｰﾄﾞ
+
+特徴  928ﾁｯﾌﾟが乗った15P,Dｻﾌﾞﾒｽとｼｭﾘﾝｸ15Pｺﾈｸﾀｰを持ったﾎﾞｰﾄﾞ,8連Dip1つ
+      ｼﾞｬﾝﾊﾟｰ1つ,PC-9821A-E09-01(増設V-RAM)ｿｹｯﾄ有り。
+
+設定  SW1  1   ON  ﾉﾝｲﾝﾀｰﾚｰｽﾓﾆﾀｰ
+               OFF ｲﾝﾀｰﾚｰｽﾓﾆﾀｰ
+           2   ON  98RL/GS  9821/S1,S2  9821Ap,Ae,As,Ce,H98S8
+               OFF 9801FX,RS,ES,DS,FS,RA,DA,FA,US,T,CS,BX,BA,98XLﾀﾞﾌﾞﾙ
+           3   常にON
+           4   ON  PC-9801ES以外
+               OFF PC-9801ESで使用
+
+          5,6 CPUｱﾄﾞﾚｽ     ON ,ON   F00000～F0FFFF,F80000～F80FFF ☆
+              (16MBﾓｰﾄﾞ)   ON ,OFF  F20000～F2FFFF,F88000～F88FFF
+                           OFF,ON   F40000～F4FFFF,F90000～F90FFF
+                           OFF,OFF  F60000～F6FFFF,F98000～F98FFF
+
+          7,8 CPUｱﾄﾞﾚｽ     ON ,ON   E00000~E0FFFF,DF000~DFFFF  ☆
+              (1MBｱﾄﾞﾚｽ)   ON ,OFF  E20000~E2FFFF,DB000~DBFFF
+                           OFF,ON   E40000~E4FFFF,D7000~D7FFF
+                           OFF,OFF  E60000~E6FFFF,D3000~D3FFF
+
+      JP1 2M...PC-9821A-E09-01未使用
+          4M...PC-9821A-E09-01使用

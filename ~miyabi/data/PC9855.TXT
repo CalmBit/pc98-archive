@@ -1,0 +1,27 @@
+----------------------------------------------------------------------------
+PC-9801-50,9801-55,L,U                           SCSIﾎﾞｰﾄﾞ
+
+特徴  中央に銀色のｶｽﾀﾑﾁｯﾌﾟがあり,8連Dipが2個と2連ｼﾞｬﾝﾊﾟｰ2個ある。
+      I/Fはﾊｰﾌとﾌﾙﾋﾟｯﾁの50Pｱﾝﾌｪﾉｰﾙｺﾈｸﾀｰの2種類がある。
+      PC-9801-50,55ではMOからのｼｽﾃﾑ起動は出来ない(55L以降からは可能)
+
+設定  SW1  1   2   3  (ID)       4   5   6  (割り込み)     7  8   (DMA)   
+       ☆ ON  ON  ON  7 固定    ON  OFF OFF INT1       ☆ OFF OFF DMA #0  
+                                OFF ON  OFF INT2          ON  OFF 設定禁止
+                             ☆ ON  ON  OFF INT3          OFF ON  DMA #2  
+                                OFF OFF ON  INT5          ON  ON  DMA #3  
+                                ON OFF  ON  INT6                   
+
+
+      SW2  1   2   3  (ROMｱﾄﾞﾚｽ)           4   5  (ROMｱﾄﾞﾚｽ)    
+          OFF ON  OFF \D4000～D4FF     ☆ OFF ON  \EC000～ECFFF        
+       ☆ OFF ON  ON  \DC000～DCFFF       ON  ON  \EE000～-EEFFF        
+
+                                           6   7  (機種設定)   
+                                          OFF OFF 98XA専用       
+         SW3    SW4   (I/Oﾎﾟｰﾄｱﾄﾞﾚｽ)   ☆ ON  OFF 8086/V30      
+      ☆ 01-02  01-02 CC0                 OFF ON  ﾊｲﾚｿﾞﾉｰﾏﾙ両用         
+         02-03  01-02 CD0                 ON  ON  286/386               
+         01-02  02-03 CE0                  8      (ROM ｱｸｾｽ)       
+         02-03  02-03 CF0              ☆ ON      有効         
+                                          OFF     切り離し 

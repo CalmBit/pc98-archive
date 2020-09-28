@@ -1,0 +1,21 @@
+----------------------------------------------------------------------------
+PC-9801-08,09                                    2DD I/Fﾎﾞｰﾄﾞ
+
+特徴  ｵｼﾚｰﾀｰが乗ってる36Pinｱﾝﾌｪﾉｰﾙﾌﾙﾋﾟｯﾁのﾎﾞｰﾄﾞ,9801-09は8連Dipが1つと
+　　　ｼﾞｬﾝﾊﾟｰ4つ,9801-08はDip類無し。
+
+設定  SW1  1   2        (割り込み)    SW1  3   4   5    (固定)      
+          ON  ON        INT 3             ON  OFF OFF
+       ☆ ON  OFF       INT 4
+          OFF ON        INT 5         SW1  6   7   8    (ROMｱﾄﾞﾚｽ)
+          OFF OFF       INT 6             ON  ON  ON    \D0000～D0FFF
+                                          ON  ON  OFF   \D1000～D1FFF
+                                          ON  OFF ON    \D2000～D2FFF
+      SW2/SW3   B-A  B-A                  ON  OFF OFF   \D3000～D3FFF
+                                          OFF ON  ON    \D4000～D4FFF
+                                          OFF ON  OFF   \D5000～D5FFF
+                                       ☆ OFF OFF ON    \D6000～D6FFF
+                                          OFF OFF OFF   \D7000～D7FFF
+   ☆ SW4  解放
+   ☆ SW5  ｼｮｰﾄ
+   

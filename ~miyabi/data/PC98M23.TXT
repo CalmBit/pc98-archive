@@ -1,0 +1,55 @@
+------------------------------------------------------------------------
+PC98M23(Carrabel)                              SCSI/SASIﾎﾞｰﾄﾞ
+
+特徴  ｱﾝﾌｪﾉｰﾙ50Pﾊｰﾌ端子とDｻﾌﾞ25P端子を持つﾎﾞｰﾄﾞ,8PDipが4つとｼﾞｬﾝﾊﾟｰ5個。
+
+設定  SCSI部分
+      SW1  1   2   3  (ID)       SW1  4   5   6    (割り込みﾚﾍﾞﾙ)
+          OFF OFF OFF   0            OFF OFF OFF   INT 0
+          ON  OFF OFF   1            ON  OFF OFF   INT 1
+          OFF ON  OFF   2         　 OFF ON  OFF   INT 2
+          ON  ON  OFF   3            ON  ON  OFF   INT 3
+          OFF OFF ON    4         ☆ OFF OFF ON    INT 5
+          ON  OFF ON    5            ON  OFF ON    INT 6
+          OFF ON  ON    6
+       ☆ ON  ON  ON    7
+
+      SW1  7   8       (DMA)
+       ☆ OFF OFF      #0
+          ON  OFF      設定禁止
+          OFF ON       #2
+          ON  ON       #3
+
+      SW2  1   2   3  (ﾛｰｶﾙｱﾄﾞﾚｽ)    SW2  4   5  (ﾛｰｶﾙｱﾄﾞﾚｽ2)
+       　 OFF ON  OFF  D4000~D4FFF    ☆ OFF ON   EC000~ECFFF
+       ☆ OFF ON  ON   DC000~DCFFF       ON  ON   EE000~EEFFF
+
+      SW2  6   7   (使用機種)    SW2  8   (ROMｱｸｾｽ可)
+          OFF OFF   98XA専用       ☆ ON   固定
+          ON  OFF   V30専用
+          OFF ON    98XL,XL^2,RL専用
+       ☆ ON  ON    CPU 286,386,486
+
+      SW3   SW4   (I/Oﾍﾞｰｽｱﾄﾞﾚｽ)
+   ☆ 1-2   1-2   CC0  固定
+
+設定 SASI部分
+                SW5-1   2   3   4   5   6   7   8 
+      80MB 一括 ☆ ON  ON  OFF ON  OFF OFF OFF OFF
+      40MB 一括    ON  ON  OFF OFF ON  OFF OFF OFF
+      40+40        ON  ON  OFF OFF ON  OFF OFF ON
+
+                SW6-1   2   3   4   5   6   7   8
+                ☆ OFF OFF OFF ON  OFF ON  OFF OFF その他
+                   OFF OFF ON  ON  OFF ON  OFF OFF 32Bitﾏｼﾝで40+40M時
+                   ON  ON  ON  ON  OFF ON  OFF OFF 80MB一括時
+                   OFF ON  ON  ON  OFF ON  OFF OFF 32Bitﾏｼﾝで40M時
+                   OFF ON  OFF ON  OFF ON  OFF OFF 40MB一括時
+
+                SW7  1-8 3-6     98M2専用
+                  ☆ 1-8 4-5     8086/V30/286/386CPU
+                     2-7 4-5     初代98/98XA
+
+                JP1  左ｼｮｰﾄ      固定(DMA#0,INT3,I/Oｱﾄﾞﾚｽ80H,82H)
+                JP2　解放/JP3  ｼｮｰﾄ  固定(SASI部分切り離し)
+

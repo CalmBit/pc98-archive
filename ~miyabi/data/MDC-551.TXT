@@ -1,0 +1,30 @@
+----------------------------------------------------------------------------
+MDC-551,L(緑電子)                                SCSIﾎﾞｰﾄﾞ
+
+特徴  ｱﾝﾌｪﾉｰﾙ36Pﾊｰﾌ端子を持つSCSIﾎﾞｰﾄﾞ,ｽﾛｯﾄ側に8PDipが2つと
+　　　SCSIﾛﾑの隣に4連ｼﾞｬﾝﾊﾟｰと3連ｼﾞｬﾝﾊﾟｰと,ｴｯｼﾞ側に1連ｼﾞｬﾝﾊﾟｰがある。
+
+設定  SW1  1   2   3  (ID) SW1  4   5   6   (割り込み) SW1  7   8   (DMA)
+          ON  OFF OFF 1        OFF OFF OFF  INT 0       ☆ OFF OFF  #0
+          OFF ON  OFF 2     　 ON  OFF OFF  INT 1          ON  OFF  設定禁止
+          ON  ON  OFF 3     ☆ OFF ON  OFF  INT 2          OFF ON   #2
+          OFF OFF ON  4     　 ON  ON  OFF  INT 3          ON  ON   #3    
+          ON  OFF ON  5        OFF OFF ON   INT 4                         
+          OFF ON  ON  6        ON  OFF ON   INT 5                          
+       ☆ ON  ON  ON  7                                                   
+
+      SW2  1   2   3  (ﾛｰｶﾙｱﾄﾞﾚｽ)    SW2  4   5  (ﾛｰｶﾙｱﾄﾞﾚｽ2)
+       ☆ OFF ON  OFF  D4000～D4FFF   ☆ OFF ON   EC000～ECFFF
+          OFF ON  ON   DC000～DCFFF      ON  ON   EE000～EEFFF
+
+      SW2  6   7   (使用機種)    SW2  8   (ROMｱｸｾｽ可)
+          OFF OFF   98XA専用       ☆ ON   固定
+          ON  OFF   V30専用
+          OFF ON    98XL,XL^2,RL専用
+       ☆ ON  ON    CPU 286,386,486
+      JP1 ☆  1-2,5-6 ｼｮｰﾄ(固定)
+      JP2 ☆  1-8,2-7,3-6 ｼｮｰﾄ(固定)
+      　　☆　4-5 ｼｮｰﾄ...I/Oｽﾄﾘﾝｸﾞ命令転送ﾓｰﾄﾞ
+                  ｵｰﾌﾟﾝ..DMA転送ﾓｰﾄﾞ
+      JP3 ☆  ｼｮｰﾄ...9801ﾃﾞｽｸﾄｯﾌﾟ用
+              ｵｰﾌﾟﾝ..I/O拡張ﾕﾆｯﾄ用

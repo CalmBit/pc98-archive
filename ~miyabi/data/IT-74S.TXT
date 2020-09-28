@@ -1,0 +1,25 @@
+----------------------------------------------------------------------------
+IT-74S(Itec)                                     SCSIﾎﾞｰﾄﾞ
+
+特徴  ｱﾝﾌｪﾉｰﾙﾌﾙﾋﾟｯﾁ50Pin端子を持つSCSIﾎﾞｰﾄﾞ,8PDipが2つとｼﾞｬﾝﾊﾟｰｽｲｯﾁ2つ。
+
+設定  SW1  1   2   3  (ID) SW1  4   5   6  (割り込み) SW1  7   8  (DMA)   
+          ON  OFF OFF 1        OFF OFF OFF INT 0          OFF OFF #0      
+          OFF ON  OFF 2     ☆ ON  OFF OFF INT 1          ON  OFF 設定禁止
+          ON  ON  OFF 3        OFF ON  OFF INT 2          OFF ON  #2      
+          OFF OFF ON  4        ON  ON  OFF INT 3       ☆ ON  ON  #3      
+          ON  OFF ON  5        OFF OFF ON  INT 5
+          OFF ON  ON  6        ON  OFF ON  INT 6
+       ☆ ON  ON  ON  7
+      SW2  1   2   3   4   5   6   7   8
+       ☆ OFF ON  ON  OFF ON  ON  ON  ON    下記以外の機種
+          OFF ON  ON  OFF ON  ON  OFF ON    98U,UV,VF,VM,CV 286U
+          OFF ON  ON  OFF ON  OFF OFF ON    98XA
+          OFF ON  ON  OFF ON  OFF ON  ON    98XL,XL^2,RL,H98
+          OFF ON  OFF OFF ON  ON  OFF ON    98E,F,M
+
+      SW3  SW4     ...I/Oｱﾄﾞﾚｽ      
+      1-2  1-2 ｼｮｰﾄ...CC0H       
+      2-3  1-2 ｼｮｰﾄ...CD0H       
+      1-2  2-3 ｼｮｰﾄ...CE0H
+      2-3  2-3 ｼｮｰﾄ...CF0H

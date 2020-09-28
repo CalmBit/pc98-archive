@@ -1,0 +1,35 @@
+----------------------------------------------------------------------------
+SC-1000(EPSON)                                SCSIﾎﾞｰﾄﾞ
+
+特徴  ｱﾝﾌｪﾉｰﾙ50Pﾊｰﾌ端子を持つSCSIﾎﾞｰﾄﾞ,ｽﾛｯﾄ側に8連Dipが2つと4連Dip1つ
+　　　ｼﾞｬﾝﾊﾟｰ2個。
+
+設定  SW1  1   2   3  (ID) SW1  4   5   6   (割り込み) SW1  7   8   (DMA)
+          ON  OFF OFF 6        ON  ON  ON   INT 0       ☆ ON  ON   #0
+          OFF ON  OFF 5     　 OFF ON  ON   INT 1          OFF ON   設定禁止
+          ON  ON  OFF 4        ON  OFF ON   INT 2          ON  OFF  #2
+          OFF OFF ON  3     ☆ OFF OFF ON   INT 3          OFF OFF  #3    
+          ON  OFF ON  2        ON  ON  OFF  INT 5                         
+          OFF ON  ON  1        OFF ON  OFF  INT 6                          
+          ON  ON  ON  0                                                   
+       ☆ OFF OFF OFF 7                                                   
+
+      SW2  1   2   3  (ﾛｰｶﾙｱﾄﾞﾚｽ)    SW2  4   5  (ﾛｰｶﾙｱﾄﾞﾚｽ2)
+          ON  ON  ON   禁止              ON  ON  禁止
+       ☆ OFF ON  ON   DC000~DCFFF    ☆ OFF ON　EC000~ECFFF
+          ON  OFF ON   禁止              ON  OFF 禁止
+          OFF OFF ON   禁止              OFF OFF 禁止
+          ON  ON  OFF  禁止
+          OFF ON  OFF  D4000~D4FFF
+          ON  OFF OFF  禁止
+          OFF OFF OFF  禁止
+          
+      SW2  6   7   (使用機種)        SW2  8   (ROMｱｸｾｽ可)
+          OFF OFF   98XA専用          ☆ ON   固定
+          ON  OFF   V30専用              OFF  禁止
+          OFF ON    ﾊｲﾚｿﾞ/ﾉｰﾏﾙ両用
+       ☆ ON  ON    CPU 286,386,486
+
+      JP1 ☆  1-2 ｼｮｰﾄ(固定)
+
+      JP2 ☆  1-2 ｼｮｰﾄ(固定)

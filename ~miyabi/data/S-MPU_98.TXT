@@ -1,0 +1,17 @@
+----------------------------------------------------------------------------
+S-MPU/PC(Roland)                                 MIDIﾎﾞｰﾄﾞ   
+
+特徴  5PinのDinｺﾈｸﾀｰが4つあり,4連のDip1つとｽﾛｯﾄ側にﾛｰﾀﾘｰｽｲｯﾁが1つある。
+
+設定  ﾛｰﾀﾘｰｽｲｯﾁ   (割り込みﾚﾍﾞﾙ)  0    1    2    5    6      3,4,7,8 使用不可
+                                 INT0 INT1 INT2 INT5 INT6
+
+      SW1  1   2   3   4    (I/Oｱﾄﾞﾚｽ)
+       ☆ OFF OFF OFF ON    E0D0～E0D2
+          ON  OFF OFF ON    E4D0～E4D2
+          OFF ON  OFF ON    E8D0～E8D2
+          ON  ON  OFF ON    ECD0～ECD2
+          OFF OFF ON  ON    F0D0～F0D2
+          ON  OFF ON  ON    F4D0～F4D2
+          OFF ON  ON  ON    F8D0～F8D2
+          ON  ON  ON  ON    FCD0～FCD2

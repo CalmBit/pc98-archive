@@ -1,0 +1,15 @@
+----------------------------------------------------------------------------
+PC-9801-52                                       2MBﾌﾟﾛﾃｸﾄ専用ﾗﾑﾎﾞｰﾄﾞ
+
+特徴  10連DIP1つ，ﾌﾟﾛﾃｸﾄﾉｯﾁのあるﾗﾑﾎﾞｰﾄﾞ,286CPU以上で使用可能
+
+設定  1-9　常にOFF
+      1-10 OFF....9801VX
+           ON.....98XL,XL^2
+        1   2   3   4   5   6   7   8  ｱﾄﾞﾚｽ
+       ON  ON  ON  OFF ON  ON  OFF ON  100000～2FFFFF (640KB～)
+       ON  ON  OFF ON  ON  ON  OFF OFF 200000～3FFFFF (640KB+1024KB～)
+       ON  ON  OFF OFF ON  OFF ON  ON  300000～4FFFFF (640KB+2048KB～)
+       ON  OFF ON  ON  ON  OFF ON  OFF 400000～5FFFFF (640KB+3072KB～)
+                                 |
+

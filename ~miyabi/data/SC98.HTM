@@ -1,0 +1,81 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<!DOCTYPE html>
+<html lang="jp-JP">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" Content="鈴木 雅芳">
+  <meta name="keywords" Content="98JUNK.DOC">
+  <meta name="description" Content="98JUNK.DOC/MENU">
+  <!--
+         The domain is no longer extant, but for posterity, this is the
+         original author's email address.
+         
+         miyabi@super.win.or.jp
+    !-->
+  <title>98JUNK.DOC</title>
+  <style>
+    a {
+      color: #800000
+    }
+
+    a:visited {
+      color: #0080ff;
+    }
+
+    a:active {
+      color: #0000a0;
+    }
+
+    table {
+      width: 490px;
+      border: none;
+    }
+
+    .hilight {
+      color: #FF0000;
+    }
+  </style>
+</head>
+
+<body>
+  <table>
+    <tr>
+      <td>
+        <pre>----------------------------------------------------------------------------
+SC-98.II.SB.SBII(I/Oﾃﾞｰﾀ)                        SCSI-2ﾎﾞｰﾄﾞ</pre>
+        <pre>特徴  ｱﾝﾌｪﾉｰﾙ50Pﾊｰﾌ端子を持つSCSIﾎﾞｰﾄﾞ,8連Dipが1つと2連ｼﾞｬﾝﾊﾟｰ1つ。
+      割り込み,DMAﾁｬﾝﾈﾙ,転送方式は立ち上げ時[CTRL]+[GRAPH]+[S]を
+      押してROM内ﾙｰﾁﾝで設定,SC-98.98IIはCﾊﾞｽ,SB.SBIIはｾｶﾝﾄﾞﾊﾞｽ。</pre>
+        <pre>設定  SW1  1   2   3  ﾉｰﾏﾙROMｱﾄﾞﾚｽ    SW1  4   5  ﾊｲﾚｿﾞROMｱﾄﾞﾚｽ
+          OFF OFF OFF D0000-D0FFF         OFF OFF E8000-E8FFF
+          ON  OFF OFF D2000-D2FFF         ON  OFF EA000-EAFFF
+          OFF ON  OFF D4000-D4FFF      ☆ OFF ON  EC000-ECFFF
+          ON  ON  OFF D6000-D6FFF         ON  ON  EE000-EEFFF
+          OFF OFF ON  D8000-D8FFF
+          ON  OFF ON  DA000-DAFFF
+       ☆ OFF ON  ON  DC000-DCFFF
+          ON  ON  ON  DE000-DEFFF</pre>
+        <pre>      SW1  6   7   ﾎｽﾄﾀｲﾌﾟ            SW1  8  BIOSの有無<b class="hilight">※1</b>
+          OFF OFF  未使用              ☆ ON   有効
+          ON  OFF  未使用                 OFF  無効
+          OFF ON   ﾊｲﾚｿﾞ/ﾉｰﾏﾙ兼用機
+       ☆ ON  ON   286以降ﾉｰﾏﾙﾓｰﾄﾞのみ</pre>
+        <pre>     JP2  1-4  2-3  I/Oｱﾄﾞﾚｽ
+       ☆ ｼｮｰﾄ ｼｮｰﾄ CC0.CC2.CC4.CC6
+          解放 ｼｮｰﾄ CD0.CD2.CD4.CD6
+          ｼｮｰﾄ 解放 CE0.CE2.CE4.CE6
+          解放 解放 CF0.CF2.CF4.CF6</pre>
+        <p>
+          <b class="hilight">※1　2002/3/27　変更</b>
+          <br>
+          <b><small>ma_hiさんより</small><small>「</small>ON」
+            のとき「有効」であるという情報をいただき、3枚のボードとも､その通りでしたので､修正しました。<br>
+            ありがとうございました m(_ _)m)　</b>
+      </td>
+    </tr>
+  </table>
+
+</body>
+
+</html>

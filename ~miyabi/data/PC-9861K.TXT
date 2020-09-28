@@ -1,0 +1,48 @@
+----------------------------------------------------------------------------
+PC-9861,K                                        RS232C第2.3回線ﾎﾞｰﾄﾞ
+
+特徴  ｽﾛｯﾄ部分にDｻﾌﾞ25Pin(ﾒｽ)端子が2個,6連Dip2個,4連Dip1個,ｼﾞｬﾝﾊﾟｽｲｯﾁが6個。
+
+設定  SW1,3     (SW1=ﾁｬﾝﾈﾙ2 SW3=ﾁｬﾝﾈﾙ3用ﾎﾞｰﾚｰﾄｽｲｯﾁ)
+       1   2    (転送ﾓｰﾄﾞ)
+   ☆ ON  ON    調歩同期
+      ON  OFF   同期(ST2)
+      OFF ON    同期時刻
+      OFF OFF   同期(ST1)
+
+       3   4   5   6    (調歩同期ﾓｰﾄﾞ時)   3   4   5   6    (同期ﾓｰﾄﾞ時)
+      OFF ON  OFF ON    300 Bps           OFF ON  ON  ON    300  Bps
+      ON  OFF OFF ON    600 Bps           ON  OFF ON  ON    600  Bps
+      OFF OFF OFF ON    1200Bps           OFF OFF ON  ON    1200Bps
+      ON  ON  ON  OFF   2400Bps           ON  ON  OFF ON    2400Bps
+      OFF ON  ON  OFF   4800Bps           OFF ON  OFF ON    4800Bps
+   ☆ ON  OFF ON  OFF   9600Bps           ON  OFF OFF ON    9600Bps
+
+      3   4   5   6     (時刻ﾓｰﾄﾞ時)
+     OFF ON  OFF ON     300 Bps
+     ON  OFF OFF ON     600 Bps
+     OFF OFF OFF ON     1200Bps
+     ON  ON  ON  OFF    2400Bps
+     OFF ON  ON  OFF    2400Bps
+     ON  OFF ON  OFF    9600Bps
+
+     SW2        (割り込み,SW2-1,2=ﾁｬﾝﾈﾙ2 SW2-3,4=ﾁｬﾝﾈﾙ3用)
+      1   2     (ﾁｬﾝﾈﾙ1)       3   4     (ﾁｬﾝﾈﾙ2)
+  ☆ OFF OFF    INT0          OFF OFF    INT0
+     OFF ON     INT1          OFF ON     INT4
+     ON  OFF    INT2       ☆ ON  OFF    INT5
+     ON  ON     INT3          ON  ON     INT6
+
+     J1 J2  ☆ 両方共　3,4番ｼｮｰﾄ(固定)
+
+     J3         (本体ｸﾛｯｸ                            J4    (ﾛﾑｱﾄﾞﾚｽ)   
+     5M         (初代98)                             1     \C0000～C3FFF
+  ☆ 8/10M      (初代以外の98)                       2     \C4000～C7FFF
+                                                     3     \C8000～CBFFF
+     J5,J6      (Pin割り当て J5=ﾁｬﾝﾈﾙ2 J6=ﾁｬﾝﾈﾙ3)    4     \CC000～CFFFF
+     1          TXD      (ﾃﾞﾌｫﾙﾄは統べてｼｮｰﾄ)     ☆ 5     \D0000～D3FFF
+     2          RTS　　　(使わない結線は外す)        6     \D4000～D7FFF
+     3          DTR                                  7     \D8000～DBFFF
+     4          RXD                                  8     \DC000～DFFFF
+     5          CTS    
+     6          DSR    

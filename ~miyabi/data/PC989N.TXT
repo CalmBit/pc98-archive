@@ -1,0 +1,26 @@
+----------------------------------------------------------------------------
+PC-9801-29K,N                                    GP/IBｲﾝﾀｰﾌｪｰｽ(新)
+
+特徴  ｵｼﾚｰﾀｰが乗っていてｱﾝﾌｪﾉｰﾙ24Pを持っているﾎﾞｰﾄﾞ,10連Dipが1つと
+      ｼﾞｬﾝﾊﾟｰ3つ。
+
+設定  SW1  1   2   (DMAﾁｬﾝﾈﾙ)     3   4   (割り込み)
+          ON  ON   0             ON  ON   INT0
+          ON  OFF  禁止          ON  OFF  INT4
+          OFF ON   禁止       ☆ OFF ON   INT5
+       ☆ OFF OFF  3             OFF OFF  INT6
+
+      SW1  5    (ﾓｰﾄﾞ)
+          ON    ｽﾚｰﾌﾞ 
+       ☆ OFF   ﾏｽﾀｰ   
+
+      SW1  6   7   8   9   10  (ﾏｲｱﾄﾞﾚｽ)  ONで0 OFFで1 の２進数
+       ☆ ON  ON  ON  ON  ON   0
+                   ↓ 
+          OFF OFF OFF OFF ON   30
+
+      SW2 ☆ ABｼｮｰﾄ　　 ROM ON
+             BCｼｮｰﾄ　　 ROM OFF
+
+      SW3    ABｼｮｰﾄ固定
+      SW4    ABｼｮｰﾄ固定

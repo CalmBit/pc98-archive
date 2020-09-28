@@ -1,0 +1,56 @@
+----------------------------------------------------------------------------
+PIO-9834-1M/2M(I/Oﾃﾞｰﾀｰ)                       ﾊﾞﾝｸSﾗﾑﾎﾞｰﾄﾞ
+
+特徴  8連Dip1つ,4連Dip2つとｼﾞｬﾝﾊﾟｰ2個付いたﾊﾞﾝｸﾗﾑﾎﾞｰﾄﾞ,3.6v100mAの電池が
+　　　載っている。
+
+設定   SW1     1-1  1-2  1-3  1-4  1-5  1-6  1-7  1-8
+       128KB~  ON   ON   ON   ON   ON   ON   ON   ON
+       256KB~  ON   ON   ON   ON   ON   OFF  ON   ON
+       384KB~  ON   ON   ON   ON   ON   OFF  OFF  ON
+    ☆ 512KB~  ON   ON   ON   ON   ON   OFF  OFF  OFF
+
+               1-1  1-2  1-3  1-4  1-5  1-6  1-7  1-8   ﾊﾞﾝｸ番号
+               ON   ON   OFF  ON   OFF  OFF  OFF  OFF   A0~AF
+               ON   OFF  OFF  ON   OFF  OFF  OFF  OFF   B0~BF
+               ON   ON   ON   OFF  OFF  OFF  OFF  OFF   C0~CF
+               ON   OFF  ON   OFF  OFF  OFF  OFF  OFF   D0~DF
+               ON   ON   OFF  OFF  OFF  OFF  OFF  OFF   E0~EF
+               ON   OFF  OFF  OFF  OFF  OFF  OFF  OFF   F0~FF
+               ON   ON   OFF  ON   OFF  OFF  OFF  OFF   A0~AF
+               
+               ON   OFF  ON   OFF  OFF  OFF  OFF  OFF   D0~D7
+               OFF  OFF  ON   OFF  OFF  OFF  OFF  OFF   D8~DF
+               ON   ON   OFF  OFF  OFF  OFF  OFF  OFF   E0~E7
+               OFF  ON   OFF  OFF  OFF  OFF  OFF  OFF   E8~EF
+               ON   OFF  OFF  OFF  OFF  OFF  OFF  OFF   F0~F7
+               OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF   F8~FF
+
+       SW2     2-1  2-2  2-3  2-4    IPLのRAMｱﾄﾞﾚｽ(4KBの時)
+            ☆ ON   ON   ON   ON     D0000~D0FFF
+               ON   ON   ON   OFF    D1000~D1FFF
+               OFF  ON   ON   ON     D8000~D8FFF
+               OFF  OFF  OFF  OFF    DF000~DFFFF
+
+               2-1  2-2  2-3  2-4    IPLのRAMｱﾄﾞﾚｽ(8KBの時)
+               ON   ON   ON   *      D0000~D1FFF
+               ON   ON   OFF  *      D2000~D3FFF
+               OFF  ON   ON   *      D8000~D9FFF
+               OFF  OFF  OFF  *      DE000~DFFFF
+
+               2-1  2-2  2-3  2-4    IPLのRAMｱﾄﾞﾚｽ(16KBの時)
+               ON   ON   *    *      D0000~D3FFF
+               ON   OFF  *    *      D4000~D7FFF
+               OFF  ON   *    *      D8000~DBFFF
+               OFF  OFF  *    *      DC000~DFFFF
+
+       SW3     3-1  3-2  3-3  3-4    IPL拡張RAMｴﾘｱ設定ｽｲｯﾁ
+            ☆ ON   OFF  OFF  ON     8KB
+               ON   OFF  ON   ON     4KB
+               ON   OFF  ON   OFF    16KB
+
+       JP1  ☆ ON   電池ON
+               OFF  電池OFF
+
+       JP2  ☆ ON   286CPU以上
+               OFF  8086,V30

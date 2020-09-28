@@ -1,0 +1,28 @@
+----------------------------------------------------------------------------
+SCSIB55IV                                   SCSIﾎﾞｰﾄﾞ
+
+特徴  Dｻﾌﾞ50P ﾌﾙﾋﾟｯﾁ端子を持つSCSIﾎﾞｰﾄﾞ,8連Dipが2つとｼﾞｬﾝﾊﾟｰ2つ,
+      I/F側のﾎﾞｰﾄﾞ上に50Pﾌﾗｯﾄ端子有り。
+
+設定  SW1  1   2   3  (ID) SW1  4   5   6   (割り込み) SW1  7   8   (DMA)
+          ON  OFF OFF 1        OFF OFF OFF  INT 0       　 OFF OFF  #0
+          OFF ON  OFF 2     ☆ ON  OFF OFF  INT 1          ON  OFF  設定禁止
+          ON  ON  OFF 3     　 OFF ON  OFF  INT 2          OFF ON   #2
+          OFF OFF ON  4     　 ON  ON  OFF  INT 3       ☆ ON  ON   #3    
+          ON  OFF ON  5        OFF OFF ON   INT 4                         
+          OFF ON  ON  6        ON  OFF ON   INT 5                          
+       ☆ ON  ON  ON  7                                                   
+
+      SW2  1   2   3   4   5   6   7   8
+       ☆ OFF ON  ON  OFF ON  ON  ON  ON    下記以外の機種
+          OFF ON  ON  OFF ON  ON  OFF ON    98U,UV,VF,VM,CV 286U
+          OFF ON  ON  OFF ON  OFF OFF ON    98XA
+          OFF ON  ON  OFF ON  OFF ON  ON    98XL,XL^2,RL,H98
+          OFF ON  OFF OFF ON  ON  OFF ON    98E,F,M
+
+      SW3   SW4   (I/Oﾍﾞｰｽｱﾄﾞﾚｽ)
+   ☆ 1-2   1-2   CC0
+      2-3   1-2   CD0
+      1-2   2-3   CE0
+      2-3   2-3   CF0
+

@@ -1,0 +1,21 @@
+----------------------------------------------------------------------------
+PC-9801-85(NEC)                                  ｳｨﾝﾄﾞｳｱｸｾﾗﾚｰﾀｰﾎﾞｰﾄﾞB
+
+特徴  928ﾁｯﾌﾟが乗った15P,Dｻﾌﾞﾒｽとｼｭﾘﾝｸ15Pｺﾈｸﾀｰを持ったﾎﾞｰﾄﾞ,8連Dip1つ。
+
+設定  SW1  1   ON  ﾉﾝｲﾝﾀｰﾚｰｽﾓﾆﾀｰ
+               OFF ｲﾝﾀｰﾚｰｽﾓﾆﾀｰ
+           2   ON  98RL/GS  9821/S1,S2  9821Ap,Ae,As
+               OFF 9801FX,RS,ES,DS,FS,RA,DA,FA,US,T,CS,BX,BA,98XLﾀﾞﾌﾞﾙ
+           3   常にON
+           4   常にON
+
+          5,6 CPUｱﾄﾞﾚｽ     ON ,ON   F00000～F0FFFF,F80000～F80FFF ☆
+              (16MBﾓｰﾄﾞ)   ON ,OFF  F20000～F2FFFF,F88000～F88FFF
+                           OFF,ON   F40000～F4FFFF,F90000～F90FFF
+                           OFF,OFF  F60000～F6FFFF,F98000～F98FFF
+
+          7,8 CPUｱﾄﾞﾚｽ     ON ,ON   DF000～DFFFF  ☆
+              (1MBｱﾄﾞﾚｽ)   ON ,OFF  DB000～DBFFF
+                           OFF,ON   D7000～D7FFF
+                           OFF,OFF  D3000～D3FFF

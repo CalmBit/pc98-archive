@@ -1,0 +1,35 @@
+------------------------------------------------------------------------
+IF-2770,2771(ICM)                                 SCSI-2ﾎﾞｰﾄﾞ
+
+特徴  ｱﾝﾌｪﾉｰﾙ50Pﾊｰﾌ端子を持つSCSIﾎﾞｰﾄﾞ,8PDipが2つと4連Dip1つ,ｼﾞｬﾝﾊﾟｰ
+　　　6個,ｾｶﾝﾄﾞﾊﾞｽ対応。
+
+設定  SW1  1   2   3 (ID)  SW1  4   5   6    (割り込み)　SW1  7   8  (DMA)
+          OFF OFF OFF  0    ☆ OFF OFF OFF   INT 0       　  OFF OFF #0
+          ON  OFF OFF  1       ON  OFF OFF   INT 1           ON  OFF 設定禁止
+          OFF ON  OFF  2       OFF ON  OFF   INT 2           OFF ON  #2
+          ON  ON  OFF  3       ON  ON  OFF   INT 3        ☆ ON  ON  #3
+          OFF OFF ON   4       OFF OFF ON    INT 5
+          ON  OFF ON   5       ON  OFF ON    INT 6
+          OFF ON  ON   6
+       ☆ ON  ON  ON   7
+
+      SW2  1   2   3   4   5   6   7   8
+       ☆ OFF ON  ON  OFF ON  ON  ON  ON    下記以外の機種
+          OFF ON  ON  OFF ON  OFF ON  ON    ﾉｰﾏﾙ/ﾊｲﾚｿﾞ両用機
+          OFF ON  ON  OFF ON  OFF OFF ON    PC-98XA
+
+      SW3  1   2   3   4   ROMｱﾄﾞﾚｽ/ﾓｰﾄﾞ         JP1  2-3 ｼｮｰﾄ              
+        ☆ ON  ON  OFF ON  0CC0,2,4/ﾊﾞｽﾏｽﾀ       JP2  2-3 ｼｮｰﾄ              
+           OFF ON  OFF ON  0CD0,2,4/ﾊﾞｽﾏｽﾀ       JP3  解放                  
+           ON  OFF OFF ON  0CE0,2,4/ﾊﾞｽﾏｽﾀ       JP4  解放..転送速度 10MB/秒
+           OFF OFF OFF ON  0CF0,2,4/ﾊﾞｽﾏｽﾀ            ｼｮｰﾄ..転送速度 5MB/秒 
+           ON  ON  OFF OFF 0CC0,2,4/DMA          JP5  2-3 ｼｮｰﾄ              
+           OFF ON  OFF OFF 0CD0,2,4/DMA          JP6  2-3 ｼｮｰﾄ              
+           ON  OFF OFF OFF 0CE0,2,4/DMA
+           OFF OFF OFF OFF 0CF0,2,4/DMA
+           ON  ON  ON  OFF 0CC0,2,4,6,7/FIFO
+           ON  ON  ON  OFF 0CD0,2,4,6,7/FIFO
+           ON  ON  ON  OFF 0CE0,2,4,6,7/FIFO
+           ON  ON  ON  OFF 0CF0,2,4,6,7/FIFO
+

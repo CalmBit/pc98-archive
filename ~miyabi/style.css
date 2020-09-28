@@ -1,0 +1,36 @@
+body {
+    background-color: #FFFFAA;
+    color: #ff0000;
+    text-align: center;
+}
+
+a {
+    color: #800000;
+}
+
+a:visited {
+    color: #0080ff;
+}
+
+a:active {
+    color: #0000a0;
+}
+
+a.invalid {
+    color: #000;
+}
+
+table {
+    width: 490px;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td {
+    width: 50%;
+}
+
+.top {
+    vertical-align: top;
+}

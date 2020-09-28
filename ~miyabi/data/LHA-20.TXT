@@ -1,0 +1,38 @@
+----------------------------------------------------------------------------
+LHA-20(Logitec)                                  SCSI ﾎﾞｰﾄﾞ
+
+特徴  ｱﾝﾌｪﾉｰﾙ50Pﾊｰﾌ端子を持つSCSIﾎﾞｰﾄﾞ,8連Dipが3つと3連ｼﾞｬﾝﾊﾟｰ1つある。
+      CPU286以上でﾊﾞｽﾏｽﾀ対応。
+
+設定  SW1  1   2   3  (ID) SW1  4   5   6  (割り込み) SW1  7   8  (DMA)   
+          ON  OFF OFF 1     ☆ OFF OFF OFF INT 0       　 OFF OFF #0      
+          OFF ON  OFF 2     　 ON  OFF OFF INT 1          ON  OFF 設定禁止
+          ON  ON  OFF 3     　 OFF ON  OFF INT 2          OFF ON  #2      
+          OFF OFF ON  4        ON  ON  OFF INT 3       ☆ ON  ON  #3      
+          ON  OFF ON  5        OFF OFF ON  INT 5                          
+          OFF ON  ON  6        ON  OFF ON  INT 6                          
+       ☆ ON  ON  ON  7                                                   
+
+      SW2  1   2   3  (ROM ｱﾄﾞﾚｽ)    SW2  4   5  (RON ｱﾄﾞﾚｽ ﾊｲﾚｿﾞ機)
+          OFF OFF OFF  D0000～D0FFF      OFF OFF  E8000～E8FFF
+          ON  OFF OFF  D2000～D2FFF      ON  OFF  EA000～EAFFF
+          OFF ON  OFF  D4000～D4FFF   ☆ OFF ON   EC000～ECFFF
+          ON  ON  OFF  D6000～D6FFF      ON  ON   EE000～EEFFF
+          OFF OFF ON   D8000～D8FFF   
+          ON  OFF ON   DA000～DAFFF  SW2  6   7   (使用機種)       
+       ☆ OFF ON  ON   DC000～DCFFF      OFF OFF   98XA専用        
+          ON  ON  ON   DE000～DEFFF      ON  OFF   V30専用         
+                                         OFF ON    98XL,XL^2,RL専用
+      SW2  8   (ROMｱｸｾｽ可)            ☆ ON  ON    CPU 286,386,486 
+       ☆ ON   可         
+          OFF  切り離し                                          
+
+      SW3  1   2  (I/Oﾍﾟｰｼﾞ ｱﾄﾞﾚｽ)    SW3  4   5   6   7   8  (ｼｽﾃﾑ予約)
+          OFF OFF  0CF0                ☆ ON  ON  OFF ON  OFF
+          ON  OFF  0CE0   
+          OFF ON   0CD0   
+       ☆ ON  ON   0CC0   
+
+      SW3  3  (ﾓｰﾄﾞ)                  SW5   1-2   DMAﾓｰﾄﾞ固定
+       ☆ ON  自動選択                   ☆ 2-3   ﾓｰﾄﾞ自動選択
+          OFF I/Oﾓｰﾄﾞ固定

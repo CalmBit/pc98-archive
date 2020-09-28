@@ -1,0 +1,25 @@
+----------------------------------------------------------------------------
+PC-9801-118                                      FM/PCM音源ﾎﾞｰﾄﾞ
+
+特徴  15P,Dｻﾌﾞﾒｽ(Joy)と26Pｼｭﾘﾝｸ-ﾒｽ端子(CD-ROM),ﾐﾆｼﾞｬｯｸ4個。
+　　　12連Dip1つM-ﾓｽ(拡張GM音源ｿｹｯﾄ)がある。
+   　 非PnPﾓｰﾄﾞではINT41(IRQ10)を使用
+
+設定  SW1  1   PnP             2   3   11   対応機種
+          ON   対応機種　  ☆ OFF OFF OFF   A-MATE/Ce/Ce2/V7/V10/その他486以上
+       ☆ OFF  非対応機種     ON  OFF OFF   X-MATE/St/Np/Nf
+                              OFF ON  OFF   Cb/Cx/Cf/Cb2/Cx2/Nx/Na7
+           7   DMAﾁｬﾝﾈﾙ
+          ON   2               5   6   FM音源部割込
+       ☆ OFF  1           ☆ OFF OFF  INT5(IRQ12)
+                              OFF ON   INT41(IRQ10)
+           10  割込許可       ON  OFF  INT6(IRQ13)
+          ON   使用しない     ON  ON   INT0(IRQ3)
+       ☆ OFF  使用する
+                               8   9   PCM音源部割込
+           12  未使用      ☆ OFF OFF  INT5(IRQ12)
+       ☆ OFF  固定           OFF ON   INT1(IRQ5)
+                              ON  OFF  INT41(IRQ10)
+                              ON  ON   INT0(IRQ3)
+------------------------------------------------------------------------
+

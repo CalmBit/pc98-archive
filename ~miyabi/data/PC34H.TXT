@@ -1,0 +1,24 @@
+----------------------------------------------------------------------------
+PIO-PC34H,HX-1～16M(I/Oﾃﾞｰﾀｰ)                    EMS,ﾌﾟﾛﾃｸﾄ,ﾊﾞﾝｸﾗﾑﾎﾞｰﾄﾞ
+
+特徴  6連Dip2つ(又は6連1つと8連1つ),増設用ソケット無しならば34H,あれば34HX。
+      ﾎﾞｰﾄﾞは何故か"PIO-PC34X-2/4/8M"と書いてある。
+
+設定
+     SW1 ﾓｰﾄﾞ指定
+     SW1-1   2   3 ﾓｰﾄﾞ             SW1-4   5             SW1-6
+        OFF ON  OFF ﾊｰﾄﾞｳｪｱEMS         OFF OFF V30,8086      OFF ﾊﾟｿｺﾝ本体
+        ON  OFF OFF I/Oﾊﾞﾝｸ            ON  ON  286以上       ON  拡張I/O-BOX
+        OFF OFF ON  ﾌﾟﾛﾃｸﾄﾒﾓﾘｰ
+        OFF ON  ON  EMS&ﾌﾟﾛﾃｸﾄ
+        ON  OFF ON  I/Oﾊﾞﾝｸ&ﾌﾟﾛﾃｸﾄ
+
+     SW2    1   2   3   4   5   6 
+           OFF OFF OFF OFF ON  OFF  (640KB～)      
+           OFF OFF OFF OFF ON  ON   (640KB+512KB～)
+           OFF OFF OFF ON  OFF OFF  (640KB+1024KB～)
+           OFF OFF OFF ON  OFF ON   (640KB+1536KB～)
+           OFF OFF OFF ON  ON  OFF  (640KB+2048KB～)
+           OFF OFF OFF ON  ON  ON   (640KB+2560KB～)
+           OFF OFF ON  OFF OFF OFF  (640KB+3072KB～)
+                             |

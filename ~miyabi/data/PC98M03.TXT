@@ -1,0 +1,25 @@
+----------------------------------------------------------------------------
+PC98M03,B(ｷｬﾗﾍﾞﾙ)                                       SASI ﾎﾞｰﾄﾞ
+
+特徴  8連Dip3個と4連ｼﾞｬﾝﾊﾟｰ1個があるｱﾝﾌｪﾉｰﾙﾌﾙﾋﾟｯﾁ50PのI/F。
+
+設定 
+                SW1-1   2   3   4   5   6   7   8 
+       80MB 一括   ON  ON  OFF ON  OFF OFF OFF OFF
+       40MB 一括   ON  ON  OFF OFF ON  OFF OFF OFF
+       44MB 一括   ON  ON  OFF OFF ON  OFF OFF ON
+       40+40       ON  ON  OFF OFF ON  OFF OFF ON
+
+                SW2-1   2   3   4   5   6   7   8
+                   OFF OFF OFF ON  OFF ON  OFF OFF その他
+                   OFF OFF ON  ON  OFF ON  OFF OFF 32Bitﾏｼﾝで40+40M時
+                   ON  ON  ON  ON  OFF ON  OFF OFF 80MB一括時
+                   OFF ON  ON  ON  OFF ON  OFF OFF 32Bitﾏｼﾝで40M時
+                   OFF ON  OFF ON  OFF ON  OFF OFF 40MB一括時
+
+                SW4-1   2   3   4   5   6   7   8
+                   OFF ON  OFF ON  OFF ON  OFF ON  固定
+
+                SW3  1-8 3-6     98M2専用
+                     1-8 4-5     8086/V30/286/386CPU
+                     2-7 4-5     初代98/98XA
